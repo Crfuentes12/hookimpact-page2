@@ -118,30 +118,39 @@ const workItems = [
   },
   {
     tag: 'SEO Content Ops',
-    title: 'Literanker',
+    title: 'LiteRanker',
     subtitle: '',
     desc: 'SEO content operations at scale: briefs, production workflows, editorial standards, and content refresh systems.',
-    img: 'https://placehold.co/600x300/1a1a2e/818cf8?text=SEO+dashboard\nfor+Literanker&font=montserrat',
-    imgAlt: 'SEO content production dashboard for Literanker',
+    img: 'https://placehold.co/600x300/1a1a2e/818cf8?text=SEO+dashboard\nfor+LiteRanker&font=montserrat',
+    imgAlt: 'SEO content production dashboard for LiteRanker',
     featured: false,
   },
 ];
 
 const blogPosts = [
   {
-    tag: 'Content Strategy',
     title: 'Why most B2B content calendars fail (and what to do instead)',
     date: 'Coming soon',
+    img: 'https://placehold.co/600x400/eef2ff/6366f1?text=Content+calendar\nstrategy+illustration&font=montserrat',
+    imgAlt: 'Content calendar strategy illustration',
   },
   {
-    tag: 'SEO',
     title: 'Content refresh strategies that actually recover lost rankings',
     date: 'Coming soon',
+    img: 'https://placehold.co/600x400/f0fdf4/16a34a?text=SEO+rankings\nchart+going+up&font=montserrat',
+    imgAlt: 'SEO rankings chart illustration',
   },
   {
-    tag: 'Creative Ops',
     title: 'How to build a visual system your marketing team can actually use',
     date: 'Coming soon',
+    img: 'https://placehold.co/600x400/fef2f2/ef4444?text=Design+system\ncomponent+library&font=montserrat',
+    imgAlt: 'Design system component library illustration',
+  },
+  {
+    title: 'The real cost of scattered freelancers vs. a dedicated execution partner',
+    date: 'Coming soon',
+    img: 'https://placehold.co/600x400/fffbeb/f59e0b?text=Team+collaboration\nworkflow+diagram&font=montserrat',
+    imgAlt: 'Team collaboration workflow diagram',
   },
 ];
 
@@ -397,7 +406,7 @@ export default function HomePage() {
             </p>
           </FadeIn>
 
-          {/* Tetris layout: 1 large + 2 smaller stacked */}
+          {/* Tetris layout: 1 large + 2 smaller + CTA card stacked */}
           <div className="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-2">
             {/* Featured: Programs.com (large) */}
             <FadeIn delay="fade-delay-1">
@@ -429,11 +438,11 @@ export default function HomePage() {
               </div>
             </FadeIn>
 
-            {/* 2 smaller cards stacked */}
+            {/* 2 smaller cards + View All CTA card stacked */}
             <div className="flex flex-col gap-6">
               {workItems.slice(1).map((item, i) => (
                 <FadeIn key={item.title} delay={`fade-delay-${i + 2}`}>
-                  <div className="shine-hover group flex h-full overflow-hidden rounded-2xl border border-rule-dark bg-surface-dark-alt transition-all duration-300 hover:border-accent/30">
+                  <div className="shine-hover group flex overflow-hidden rounded-2xl border border-rule-dark bg-surface-dark-alt transition-all duration-300 hover:border-accent/30">
                     <div className="relative w-2/5 shrink-0 overflow-hidden">
                       <Image
                         src={item.img}
@@ -458,23 +467,26 @@ export default function HomePage() {
                   </div>
                 </FadeIn>
               ))}
+
+              {/* View all case studies card */}
+              <FadeIn delay="fade-delay-4">
+                <Link
+                  href="/case-studies"
+                  className="group flex items-center justify-between rounded-2xl border border-rule-dark bg-gradient-to-br from-accent/10 to-purple-500/5 p-6 transition-all duration-300 hover:border-accent/40 hover:from-accent/15 hover:to-purple-500/10"
+                >
+                  <div>
+                    <p className="text-sm font-semibold text-white">View all case studies</p>
+                    <p className="mt-1 text-xs text-white/50">See detailed breakdowns of our work</p>
+                  </div>
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent/20 text-accent-light transition-all duration-300 group-hover:bg-accent group-hover:text-white">
+                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </div>
+                </Link>
+              </FadeIn>
             </div>
           </div>
-
-          {/* View all case studies */}
-          <FadeIn delay="fade-delay-3">
-            <div className="mt-12 text-center">
-              <Link
-                href="/case-studies"
-                className="inline-flex items-center gap-2 rounded-xl border border-rule-dark px-7 py-3.5 text-sm font-semibold text-white transition-all duration-200 hover:border-accent/40 hover:bg-accent/10"
-              >
-                View all case studies
-                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </Link>
-            </div>
-          </FadeIn>
         </div>
       </section>
 
@@ -551,7 +563,7 @@ export default function HomePage() {
                   We integrate with the tools your team already uses. No new platforms to learn, no migration headaches.
                 </p>
 
-                {/* Literanker partnership */}
+                {/* LiteRanker partnership */}
                 <div className="mt-10 flex items-center gap-6 rounded-2xl border border-accent/20 bg-accent-subtle p-6">
                   <div className="flex items-center gap-4">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent text-white font-bold text-sm">
@@ -561,8 +573,8 @@ export default function HomePage() {
                       <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                     </svg>
                     <Image
-                      src="https://placehold.co/100x40/transparent/6366f1?text=Literanker&font=montserrat"
-                      alt="Literanker logo"
+                      src="https://placehold.co/100x40/transparent/6366f1?text=LiteRanker&font=montserrat"
+                      alt="LiteRanker logo"
                       width={100}
                       height={40}
                       unoptimized
@@ -570,7 +582,7 @@ export default function HomePage() {
                   </div>
                   <div className="flex-1">
                     <p className="text-sm font-semibold text-heading">SEO Partner</p>
-                    <p className="text-xs text-muted">Strategic SEO content operations powered by our partnership with Literanker.</p>
+                    <p className="text-xs text-muted">Strategic SEO content operations powered by our partnership with LiteRanker.</p>
                   </div>
                 </div>
               </div>
@@ -622,102 +634,87 @@ export default function HomePage() {
       <section className="border-t border-rule bg-surface-alt py-24 lg:py-32">
         <div className="mx-auto max-w-6xl px-6">
           <FadeIn>
-            <div className="flex items-end justify-between">
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-widest text-accent">
-                  Blog
-                </p>
-                <h2 className="mt-4 text-3xl font-bold sm:text-4xl">
-                  Latest thinking
-                </h2>
-              </div>
-              <Link
-                href="/blog"
-                className="hidden text-sm font-medium text-accent transition-colors hover:text-accent-hover md:inline-flex items-center gap-1"
-              >
-                View all
-                <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </Link>
+            <div className="text-center mb-14">
+              <h2 className="text-3xl font-bold sm:text-4xl">
+                Latest <span className="gradient-text">Blogs</span>
+              </h2>
             </div>
           </FadeIn>
 
-          <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {blogPosts.map((post, i) => (
               <FadeIn key={post.title} delay={`fade-delay-${i + 1}`}>
-                <div className="card-hover group flex h-full flex-col rounded-2xl border border-rule bg-surface p-7 transition-colors hover:border-accent/20">
-                  <div className="mb-4 flex items-center justify-between">
-                    <span className="rounded-full bg-accent-subtle px-3 py-1 text-xs font-medium text-accent">
-                      {post.tag}
-                    </span>
-                    <span className="text-xs text-muted">{post.date}</span>
+                <div className="group">
+                  <div className="overflow-hidden rounded-3xl">
+                    <Image
+                      src={post.img}
+                      alt={post.imgAlt}
+                      width={600}
+                      height={400}
+                      className="aspect-[3/2] w-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
+                      unoptimized
+                    />
                   </div>
-                  <h3 className="text-[15px] font-semibold leading-snug text-heading">
+                  <p className="mt-4 text-xs text-muted">{post.date}</p>
+                  <h3 className="mt-2 text-sm font-semibold leading-snug text-heading">
                     {post.title}
                   </h3>
-                  <div className="mt-auto pt-5 flex items-center gap-2 text-sm font-medium text-accent opacity-0 transition-opacity group-hover:opacity-100">
-                    Read article
-                    <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                  </div>
                 </div>
               </FadeIn>
             ))}
           </div>
+
+          <FadeIn delay="fade-delay-3">
+            <div className="mt-12 text-center">
+              <Link
+                href="/blog"
+                className="inline-flex items-center gap-2 rounded-full bg-accent px-8 py-3 text-sm font-semibold text-white transition-all duration-200 hover:bg-accent-hover hover:shadow-lg hover:shadow-accent/20"
+              >
+                View All
+              </Link>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
-      {/* ══════════ DISRUPTIVE CTA BANNER ══════════ */}
-      <section className="dark-section relative bg-surface-dark overflow-hidden">
-        <div className="mx-auto max-w-6xl px-6 py-24 lg:py-32">
+      {/* ══════════ CTA BANNER STRIPE ══════════ */}
+      <section className="dark-section relative overflow-hidden bg-gradient-to-r from-[#0c0c14] via-surface-dark to-[#0c0c14]">
+        <div className="mx-auto max-w-6xl px-6">
           <FadeIn>
-            <div className="relative rounded-3xl border border-rule-dark bg-gradient-to-br from-surface-dark-alt to-surface-dark p-10 sm:p-16 overflow-visible">
-              {/* Decorative glow */}
-              <div className="pointer-events-none absolute right-[-20%] top-[-30%] h-[400px] w-[400px] rounded-full bg-accent/10 blur-[100px]" />
+            <div className="grid grid-cols-1 items-center gap-8 py-16 lg:grid-cols-12 lg:py-20">
+              {/* Left: big text */}
+              <div className="lg:col-span-4">
+                <h2 className="text-3xl font-bold text-white sm:text-4xl leading-[1.1]">
+                  Stop Guessing.<br />
+                  <span className="gradient-text">Start Scaling.</span>
+                </h2>
+              </div>
 
-              <div className="relative grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
-                <div>
-                  <h2 className="max-w-xl text-3xl font-bold sm:text-4xl">
-                    Ready to build a marketing engine that works?
-                  </h2>
-                  <p className="mt-5 max-w-lg text-lg">
-                    Tell us what you&rsquo;re building. We&rsquo;ll respond
-                    with a clear plan, even if the answer is that you
-                    don&rsquo;t need us.
-                  </p>
-                  <div className="mt-8 flex flex-wrap gap-4">
-                    <Link
-                      href="/contact"
-                      className="btn-glow inline-flex items-center gap-2 rounded-xl bg-accent px-7 py-3.5 text-sm font-semibold text-white transition-all duration-200 hover:bg-accent-hover hover:shadow-xl hover:shadow-accent/25"
-                    >
-                      Get in touch
-                      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                      </svg>
-                    </Link>
-                    <a
-                      href="mailto:hello@hookimpact.com"
-                      className="inline-flex items-center gap-2 rounded-xl border border-rule-dark px-7 py-3.5 text-sm font-semibold text-white transition-all duration-200 hover:border-accent/30 hover:bg-accent/10"
-                    >
-                      hello@hookimpact.com
-                    </a>
-                  </div>
-                </div>
+              {/* Middle: copy + button */}
+              <div className="lg:col-span-4">
+                <p className="text-sm leading-relaxed text-white/70">
+                  Tell us what you&rsquo;re building and we&rsquo;ll show you
+                  exactly how we can help. Clear plan, honest answer.
+                </p>
+                <Link
+                  href="/contact"
+                  className="btn-glow mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-accent to-purple-500 px-7 py-3 text-sm font-semibold text-white transition-all duration-200 hover:shadow-xl hover:shadow-accent/25"
+                >
+                  Let&rsquo;s Talk Now
+                </Link>
+              </div>
 
-                {/* Breakout image */}
-                <div className="relative hidden lg:block">
-                  <div className="img-breakout absolute -right-8 -top-32 bottom-[-4rem]">
-                    <Image
-                      src="https://placehold.co/440x520/eef2ff/6366f1?text=Breakout+image\nshowing+HookImpact\ndeliverables+collage\non+transparent+bg&font=montserrat"
-                      alt="HookImpact deliverables collage breaking out of the CTA banner"
-                      width={440}
-                      height={520}
-                      className="h-full w-auto object-contain drop-shadow-2xl"
-                      unoptimized
-                    />
-                  </div>
+              {/* Right: tilted breakout image 3:4 */}
+              <div className="relative hidden lg:col-span-4 lg:flex lg:justify-end">
+                <div className="relative -my-28">
+                  <Image
+                    src="https://placehold.co/320x420/eef2ff/6366f1?text=Deliverables\ncollage+photo\nslightly+tilted\n3:4+format&font=montserrat"
+                    alt="HookImpact deliverables collage tilted at an angle"
+                    width={320}
+                    height={420}
+                    className="w-[280px] rotate-3 rounded-2xl shadow-2xl shadow-black/40 transition-transform duration-500 hover:rotate-1"
+                    unoptimized
+                  />
                 </div>
               </div>
             </div>

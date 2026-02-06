@@ -289,14 +289,14 @@ export default function CaseStudiesPage() {
         </div>
       </section>
 
-      {/* CASE STUDY 3: Literanker */}
+      {/* CASE STUDY 3: LiteRanker */}
       <section className="border-b border-rule py-24 lg:py-32">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-12 lg:gap-20">
             <div className="lg:col-span-6">
               <FadeIn>
                 <p className="text-xs font-semibold uppercase tracking-widest text-accent">Case Study</p>
-                <h2 className="mt-2 text-3xl font-bold">Literanker</h2>
+                <h2 className="mt-2 text-3xl font-bold">LiteRanker</h2>
                 <div className="mt-3 flex flex-wrap gap-2">
                   <span className="rounded-full bg-accent-subtle px-3 py-1 text-xs font-medium text-accent">SEO Content</span>
                   <span className="rounded-full bg-accent-subtle px-3 py-1 text-xs font-medium text-accent">Content Operations</span>
@@ -309,7 +309,7 @@ export default function CaseStudiesPage() {
                   <div>
                     <h3 className="text-lg font-bold">The Challenge</h3>
                     <p className="mt-2 text-base leading-relaxed text-body">
-                      Literanker needed to scale SEO content production without
+                      LiteRanker needed to scale SEO content production without
                       sacrificing quality. Their existing process was manual,
                       inconsistent, and could not keep up with the volume
                       required to compete in their market. Content briefs were
@@ -333,7 +333,7 @@ export default function CaseStudiesPage() {
                   <div>
                     <h3 className="text-lg font-bold">The Impact</h3>
                     <p className="mt-2 text-base leading-relaxed text-body">
-                      Literanker went from ad-hoc content production to a
+                      LiteRanker went from ad-hoc content production to a
                       systematic engine. Output increased while maintaining
                       editorial quality, existing content was refreshed to
                       recover lost rankings, and the team had a repeatable
@@ -350,7 +350,7 @@ export default function CaseStudiesPage() {
                   <div className="img-angled overflow-hidden rounded-2xl shadow-2xl">
                     <Image
                       src="https://placehold.co/600x420/eef2ff/6366f1?text=SEO+content+dashboard\nshowing+keyword+rankings\nand+content+pipeline&font=montserrat"
-                      alt="SEO content dashboard showing keyword rankings and content pipeline for Literanker"
+                      alt="SEO content dashboard showing keyword rankings and content pipeline for LiteRanker"
                       width={600}
                       height={420}
                       className="w-full"
@@ -360,7 +360,7 @@ export default function CaseStudiesPage() {
                   <div className="absolute -bottom-6 -left-6 z-10 overflow-hidden rounded-xl shadow-xl">
                     <Image
                       src="https://placehold.co/240x180/f4f4f5/52525b?text=Content+brief\ntemplate+preview&font=montserrat"
-                      alt="Content brief template preview for Literanker SEO system"
+                      alt="Content brief template preview for LiteRanker SEO system"
                       width={240}
                       height={180}
                       className="w-full"
