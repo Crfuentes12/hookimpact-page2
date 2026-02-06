@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import FadeIn from '../components/FadeIn';
+import FAQAccordion from '../components/FAQAccordion';
 
 export const metadata: Metadata = {
   title: 'About | HookImpact',
@@ -183,35 +184,94 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-24 lg:py-32">
+      {/* CTA Stripe */}
+      <section className="dark-section relative z-20 overflow-visible bg-gradient-to-r from-[#0c0c14] via-surface-dark to-[#0c0c14]">
         <div className="mx-auto max-w-6xl px-6">
           <FadeIn>
-            <div className="relative overflow-hidden rounded-3xl border border-rule bg-gradient-to-br from-surface-alt to-surface p-10 sm:p-16">
-              <div className="pointer-events-none absolute right-[-15%] top-[-20%] h-[300px] w-[300px] rounded-full bg-accent/5 blur-[80px]" />
-              <div className="relative mx-auto max-w-2xl text-center">
-                <h2 className="text-3xl font-bold sm:text-4xl">
-                  The right fit matters.
+            <div className="grid grid-cols-1 items-center gap-8 py-16 lg:grid-cols-12 lg:py-20">
+              <div className="lg:col-span-5">
+                <h2 className="text-3xl font-bold text-white sm:text-4xl leading-[1.1]">
+                  The right fit{' '}
+                  <span className="gradient-text">matters.</span>
                 </h2>
-                <p className="mt-5 text-lg leading-relaxed text-body">
-                  If you want a team that can help you build a calm, repeatable
-                  marketing engine with high-quality output across channels, we
-                  should talk.
+              </div>
+
+              <div className="lg:col-span-4">
+                <p className="text-sm leading-relaxed text-white/70">
+                  If you want a team that builds a calm, repeatable marketing
+                  engine with high-quality output across channels, we should talk.
                 </p>
-                <div className="mt-8">
-                  <Link
-                    href="/contact"
-                    className="btn-glow inline-flex items-center gap-2 rounded-xl bg-accent px-7 py-3.5 text-sm font-semibold text-white transition-all duration-200 hover:bg-accent-hover hover:shadow-xl hover:shadow-accent/20"
-                  >
-                    Start a conversation
-                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                  </Link>
+                <Link
+                  href="/contact"
+                  className="btn-glow mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-accent to-purple-500 px-7 py-3 text-sm font-semibold text-white transition-all duration-200 hover:shadow-xl hover:shadow-accent/25"
+                >
+                  Let&rsquo;s Talk Now
+                </Link>
+              </div>
+
+              <div className="relative hidden lg:col-span-3 lg:flex lg:justify-end">
+                <div className="relative -my-28 z-30">
+                  <Image
+                    src="https://placehold.co/280x370/eef2ff/6366f1?text=Studio\nworkspace\n3:4+format&font=montserrat"
+                    alt="HookImpact studio workspace"
+                    width={280}
+                    height={370}
+                    className="w-[240px] rotate-3 rounded-2xl shadow-2xl shadow-black/40 transition-transform duration-500 hover:rotate-1"
+                    unoptimized
+                  />
                 </div>
               </div>
             </div>
           </FadeIn>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-24 lg:py-32">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-20">
+            <div className="lg:col-span-4">
+              <FadeIn>
+                <p className="text-xs font-semibold uppercase tracking-widest text-accent">
+                  FAQ
+                </p>
+                <h2 className="mt-4 text-3xl font-bold sm:text-4xl">
+                  Common questions
+                </h2>
+                <p className="mt-4 text-body">
+                  Everything you need to know about working with us.
+                </p>
+              </FadeIn>
+            </div>
+            <div className="lg:col-span-8">
+              <FadeIn delay="fade-delay-1">
+                <FAQAccordion
+                  items={[
+                    {
+                      q: 'How big is the team?',
+                      a: 'We are a small, distributed studio. That is intentional. It means you work directly with the people doing the work, not with account managers or layers of coordination. We scale capacity through trusted collaborators when needed.',
+                    },
+                    {
+                      q: 'Where are you based?',
+                      a: 'The studio is led from Valencia, Spain, with collaborators across different regions. We work across time zones and have built our processes around async communication and clear handoffs.',
+                    },
+                    {
+                      q: 'How does an engagement typically start?',
+                      a: 'It starts with a short call to understand your goals, constraints, and current setup. From there, we propose a clear scope, realistic timeline, and a quality standard we commit to. No bloated discovery phases.',
+                    },
+                    {
+                      q: 'Do you work with startups or only established companies?',
+                      a: 'Both. What matters is that you have a real product or service, a clear audience, and a need for consistent content and creative output. We work with B2B teams at different stages.',
+                    },
+                    {
+                      q: 'What makes HookImpact different from a traditional agency?',
+                      a: 'We are operators, not presenters. We do not pitch 50-slide strategies that never ship. We build systems, produce assets, and maintain quality through a tight feedback loop. Think of us as an embedded execution team.',
+                    },
+                  ]}
+                />
+              </FadeIn>
+            </div>
+          </div>
         </div>
       </section>
     </>

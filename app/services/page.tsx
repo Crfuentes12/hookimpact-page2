@@ -367,33 +367,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* FAQs */}
-      <section className="py-24 lg:py-32">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-20">
-            <div className="lg:col-span-4">
-              <FadeIn>
-                <p className="text-xs font-semibold uppercase tracking-widest text-accent">
-                  FAQ
-                </p>
-                <h2 className="mt-4 text-3xl font-bold sm:text-4xl">
-                  Common questions
-                </h2>
-                <p className="mt-4 text-body">
-                  What you need to know about working with us.
-                </p>
-              </FadeIn>
-            </div>
-            <div className="lg:col-span-8">
-              <FadeIn delay="fade-delay-1">
-                <FAQAccordion items={faqs} />
-              </FadeIn>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Stripe (matching homepage) */}
+      {/* CTA Stripe */}
       <section className="dark-section relative z-20 overflow-visible bg-gradient-to-r from-[#0c0c14] via-surface-dark to-[#0c0c14]">
         <div className="mx-auto max-w-6xl px-6">
           <FadeIn>
@@ -432,6 +406,32 @@ export default function ServicesPage() {
               </div>
             </div>
           </FadeIn>
+        </div>
+      </section>
+
+      {/* FAQs */}
+      <section className="py-24 lg:py-32">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-20">
+            <div className="lg:col-span-4">
+              <FadeIn>
+                <p className="text-xs font-semibold uppercase tracking-widest text-accent">
+                  FAQ
+                </p>
+                <h2 className="mt-4 text-3xl font-bold sm:text-4xl">
+                  Common questions
+                </h2>
+                <p className="mt-4 text-body">
+                  What you need to know about working with us.
+                </p>
+              </FadeIn>
+            </div>
+            <div className="lg:col-span-8">
+              <FadeIn delay="fade-delay-1">
+                <FAQAccordion items={faqs} />
+              </FadeIn>
+            </div>
+          </div>
         </div>
       </section>
     </>
