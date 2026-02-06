@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation';
 const links = [
   { href: '/', label: 'Home' },
   { href: '/services', label: 'Services' },
+  { href: '/case-studies', label: 'Case Studies' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
 ];
@@ -49,7 +50,7 @@ export default function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`rounded-lg px-4 py-2 text-[13px] transition-all duration-200 ${
+                className={`rounded-lg px-3.5 py-2 text-[13px] transition-all duration-200 ${
                   pathname === link.href
                     ? 'text-heading font-medium bg-accent-subtle'
                     : 'text-muted hover:text-heading hover:bg-surface-alt'
@@ -60,7 +61,7 @@ export default function Navigation() {
             ))}
             <Link
               href="/contact"
-              className="ml-4 rounded-xl bg-accent px-5 py-2 text-[13px] font-medium text-white transition-all duration-200 hover:bg-accent-hover hover:shadow-lg hover:shadow-accent/20"
+              className="ml-3 rounded-xl bg-accent px-5 py-2 text-[13px] font-medium text-white transition-all duration-200 hover:bg-accent-hover hover:shadow-lg hover:shadow-accent/20"
             >
               Get started
             </Link>
@@ -91,7 +92,7 @@ export default function Navigation() {
       {/* Mobile menu */}
       <div
         className={`overflow-hidden bg-white/95 backdrop-blur-xl transition-all duration-400 ease-out md:hidden ${
-          isOpen ? 'max-h-80 border-b border-rule' : 'max-h-0'
+          isOpen ? 'max-h-96 border-b border-rule' : 'max-h-0'
         }`}
       >
         <div className="mx-auto flex max-w-6xl flex-col gap-1 px-6 py-4">

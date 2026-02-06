@@ -151,6 +151,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
   transition: left 0.6s ease;
+  z-index: 1;
 }
 
 .shine-hover:hover::before {
@@ -179,7 +180,7 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 1;
 }
 
-/* ── Section dark text overrides ── */
+/* ── Dark section overrides ── */
 .dark-section h1,
 .dark-section h2,
 .dark-section h3,
@@ -194,4 +195,55 @@ h1, h2, h3, h4, h5, h6 {
 
 .dark-section .text-white {
   color: #ffffff;
+}
+
+/* ── Angled/overlapping image utilities ── */
+.img-angled {
+  transform: rotate(2deg);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.img-angled:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+.img-angled-reverse {
+  transform: rotate(-2deg);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.img-angled-reverse:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+.img-float {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
+}
+
+.img-float:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.15);
+}
+
+/* ── Image overlap break-out ── */
+.img-breakout {
+  position: relative;
+  z-index: 2;
+}
+
+.img-breakout > img {
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.12);
+}
+
+/* ── Logo row grayscale ── */
+.logo-grayscale {
+  filter: grayscale(100%);
+  opacity: 0.5;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.logo-grayscale:hover {
+  filter: grayscale(0%);
+  opacity: 1;
 }
