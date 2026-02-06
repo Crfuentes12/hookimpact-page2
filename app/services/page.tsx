@@ -142,7 +142,7 @@ export default function ServicesPage() {
                   No new platforms to learn, no migration headaches. We plug into the tools your team already uses and make them work harder.
                 </p>
 
-                {/* Literanker partnership */}
+                {/* LiteRanker partnership */}
                 <div className="mt-10 rounded-2xl border border-accent/20 bg-surface p-6">
                   <div className="flex items-center gap-5">
                     <div className="flex items-center gap-4">
@@ -153,8 +153,8 @@ export default function ServicesPage() {
                         <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                       </svg>
                       <Image
-                        src="https://placehold.co/100x40/transparent/6366f1?text=Literanker&font=montserrat"
-                        alt="Literanker logo"
+                        src="https://placehold.co/100x40/transparent/6366f1?text=LiteRanker&font=montserrat"
+                        alt="LiteRanker logo"
                         width={100}
                         height={40}
                         className="shrink-0"
@@ -165,7 +165,7 @@ export default function ServicesPage() {
                   <div className="mt-4">
                     <p className="text-sm font-semibold text-heading">SEO Content Partner</p>
                     <p className="mt-1 text-sm leading-relaxed text-muted">
-                      Our strategic partnership with Literanker powers our SEO content operations. From keyword research to content production, we combine their technical SEO expertise with our editorial and creative execution.
+                      Our strategic partnership with LiteRanker powers our SEO content operations. From keyword research to content production, we combine their technical SEO expertise with our editorial and creative execution.
                     </p>
                   </div>
                 </div>
