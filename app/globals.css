@@ -2,14 +2,18 @@
 
 @theme inline {
   --color-surface: #ffffff;
-  --color-surface-alt: #f9fafb;
-  --color-heading: #111827;
-  --color-body: #374151;
-  --color-muted: #6b7280;
-  --color-accent: #1a365d;
-  --color-accent-hover: #2c5282;
-  --color-rule: #e5e7eb;
-  --color-rule-light: #f3f4f6;
+  --color-surface-alt: #fafafa;
+  --color-surface-dark: #09090b;
+  --color-surface-dark-alt: #18181b;
+  --color-heading: #09090b;
+  --color-body: #52525b;
+  --color-muted: #a1a1aa;
+  --color-accent: #6366f1;
+  --color-accent-hover: #4f46e5;
+  --color-accent-light: #818cf8;
+  --color-accent-subtle: rgba(99, 102, 241, 0.08);
+  --color-rule: #e4e4e7;
+  --color-rule-dark: #27272a;
   --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
@@ -20,33 +24,45 @@ html {
 body {
   background: var(--color-surface);
   color: var(--color-body);
-  line-height: 1.7;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   color: var(--color-heading);
-  line-height: 1.15;
-  letter-spacing: -0.025em;
-  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  font-weight: 700;
 }
 
 ::selection {
-  background-color: var(--color-accent);
+  background: var(--color-accent);
   color: white;
 }
 
-/* Fade-in animation for scroll reveal */
+/* ── Gradient text ── */
+.gradient-text {
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #6366f1 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-flow 4s ease infinite;
+}
+
+@keyframes gradient-flow {
+  0%, 100% { background-position: 0% center; }
+  50% { background-position: 200% center; }
+}
+
+/* ── Scroll reveal ── */
 .fade-in-section {
   opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  transform: translateY(28px);
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .fade-in-section.is-visible {
@@ -54,7 +70,128 @@ h6 {
   transform: translateY(0);
 }
 
-/* Stagger delays for sequential fade-ins */
 .fade-delay-1 { transition-delay: 0.1s; }
 .fade-delay-2 { transition-delay: 0.2s; }
-.fade-delay-3 { transition-delay: 0.3s; }
+.fade-delay-3 { transition-delay: 0.25s; }
+.fade-delay-4 { transition-delay: 0.35s; }
+.fade-delay-5 { transition-delay: 0.45s; }
+
+/* ── Card interaction ── */
+.card-hover {
+  transition:
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.1);
+}
+
+/* ── CTA glow ── */
+.btn-glow {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-glow::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  opacity: 0;
+  z-index: -1;
+  filter: blur(16px);
+  transition: opacity 0.4s ease;
+}
+
+.btn-glow:hover::after {
+  opacity: 0.45;
+}
+
+/* ── Floating decorative orbs ── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-16px) scale(1.02); }
+}
+
+@keyframes float-reverse {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(12px) scale(0.98); }
+}
+
+.animate-float {
+  animation: float 7s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: float-reverse 9s ease-in-out infinite;
+}
+
+/* ── Dot grid pattern ── */
+.dot-pattern {
+  background-image: radial-gradient(#d4d4d8 0.8px, transparent 0.8px);
+  background-size: 20px 20px;
+}
+
+/* ── Subtle shine on hover ── */
+.shine-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
+  transition: left 0.6s ease;
+}
+
+.shine-hover:hover::before {
+  left: 100%;
+}
+
+/* ── Bento card visual accents ── */
+.bento-accent {
+  position: relative;
+}
+
+.bento-accent::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-accent), #a855f7);
+  border-radius: 999px 999px 0 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.bento-accent:hover::before {
+  opacity: 1;
+}
+
+/* ── Section dark text overrides ── */
+.dark-section h1,
+.dark-section h2,
+.dark-section h3,
+.dark-section h4 {
+  color: #fafafa;
+}
+
+.dark-section p,
+.dark-section span {
+  color: #a1a1aa;
+}
+
+.dark-section .text-white {
+  color: #ffffff;
+}
