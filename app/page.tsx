@@ -18,7 +18,6 @@ const workItems = [
     desc: 'Built the social content engine for a cybersecurity venture. LinkedIn carousels, editorial frameworks, and a tight visual standard at the level the Backlinko audience expects.',
     img: 'https://placehold.co/700x460/1a1a2e/818cf8?text=LinkedIn+carousel\ndesigns+for\nPrograms.com&font=montserrat',
     imgAlt: 'LinkedIn carousel designs created for Programs.com',
-    featured: true,
   },
   {
     tag: 'Fintech Campaigns',
@@ -27,7 +26,6 @@ const workItems = [
     desc: 'Campaign assets, landing pages, and sales enablement for a fintech company scaling demand generation.',
     img: 'https://placehold.co/600x300/1a1a2e/818cf8?text=Campaign+assets\nfor+TouchSuite&font=montserrat',
     imgAlt: 'Campaign landing page and ad creative for TouchSuite',
-    featured: false,
   },
   {
     tag: 'SEO Content Ops',
@@ -36,70 +34,51 @@ const workItems = [
     desc: 'SEO content operations at scale: briefs, production workflows, editorial standards, and content refresh systems.',
     img: 'https://placehold.co/600x300/1a1a2e/818cf8?text=SEO+dashboard\nfor+LiteRanker&font=montserrat',
     imgAlt: 'SEO content production dashboard for LiteRanker',
-    featured: false,
   },
 ];
 
 const whatWeDo = [
   {
-    pain: 'Chasing freelancers for every deliverable',
-    capability: 'Content Systems',
-    desc: 'Structured LinkedIn and social content that compounds. One team, one standard, one cadence.',
-    icon: (
-      <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
+    title: 'Content Systems',
+    desc: 'LinkedIn and social content that compounds. Editorial frameworks, repeatable formats, one cadence.',
+    img: 'https://placehold.co/480x280/f0f0ff/6366f1?text=Content+system\neditorial+calendar&font=montserrat',
+    imgAlt: 'Content system editorial calendar',
+    size: 'large',
   },
   {
-    pain: 'Output that looks like 5 companies made it',
-    capability: 'Creative Production',
-    desc: 'Campaign assets, ad creative, and visual systems that make your brand feel like one brand everywhere.',
-    icon: (
-      <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5" />
-      </svg>
-    ),
+    title: 'Creative Production',
+    desc: 'Campaign assets, ad creative, visual systems. Your brand, everywhere, looking like one brand.',
+    img: 'https://placehold.co/400x240/fef2f2/ef4444?text=Campaign+creative\nassets+showcase&font=montserrat',
+    imgAlt: 'Campaign creative assets',
+    size: 'small',
   },
   {
-    pain: 'Strategy that sounds great but never ships',
-    capability: 'SEO & GEO Ops',
-    desc: 'Search-first content built for how people find answers today, including AI-assisted discovery channels.',
-    icon: (
-      <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
-      </svg>
-    ),
+    title: 'SEO & GEO Ops',
+    desc: 'Search-first content for how people find answers today, including AI-assisted discovery.',
+    img: 'https://placehold.co/400x240/f0fdf4/16a34a?text=SEO+analytics\ndashboard&font=montserrat',
+    imgAlt: 'SEO analytics dashboard',
+    size: 'small',
   },
   {
-    pain: 'Scaling content without losing quality',
-    capability: 'Marketing Ops',
-    desc: 'Email, CRM, and automation that connects content to measurable outcomes. Systems that scale with you.',
-    icon: (
-      <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
-      </svg>
-    ),
+    title: 'Marketing Ops',
+    desc: 'Email, CRM, automation that connects content to outcomes. Systems that scale with you.',
+    img: 'https://placehold.co/400x240/fffbeb/f59e0b?text=Marketing+automation\nworkflow&font=montserrat',
+    imgAlt: 'Marketing automation workflow',
+    size: 'small',
   },
   {
-    pain: 'Agency disappears when work needs printing',
-    capability: 'Event Collateral',
-    desc: 'Signage, booth materials, one-pagers, and presentation packs built for the real world. We do not disappear.',
-    icon: (
-      <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M6.72 13.829c-.24.03-.48.062-.72.096m.72-.096a42.415 42.415 0 0110.56 0m-10.56 0L6.34 18m10.94-4.171c.24.03.48.062.72.096m-.72-.096L17.66 18m0 0l.229 2.523a1.125 1.125 0 01-1.12 1.227H7.231c-.662 0-1.18-.568-1.12-1.227L6.34 18m11.318 0h1.091A2.25 2.25 0 0021 15.75V9.456c0-1.081-.768-2.015-1.837-2.175a48.055 48.055 0 00-1.913-.247M6.34 18H5.25A2.25 2.25 0 013 15.75V9.456c0-1.081.768-2.015 1.837-2.175a48.041 48.041 0 011.913-.247m10.5 0a48.536 48.536 0 00-10.5 0m10.5 0V3.375c0-.621-.504-1.125-1.125-1.125h-8.25c-.621 0-1.125.504-1.125 1.125v3.659M18.75 12h.008v.008h-.008V12zm-8.25 0h.008v.008H10.5V12z" />
-      </svg>
-    ),
+    title: 'Event Collateral',
+    desc: 'Signage, booth materials, one-pagers, presentation packs. Built for the real world.',
+    img: 'https://placehold.co/400x240/fdf2f8/ec4899?text=Event+booth\ncollateral+design&font=montserrat',
+    imgAlt: 'Event booth collateral design',
+    size: 'small',
   },
   {
-    pain: 'No time to figure out automation',
-    capability: 'Workflow Automation',
-    desc: 'HubSpot, Klaviyo, Zapier flows designed to be simple enough to maintain, structured enough to scale.',
-    icon: (
-      <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12a7.5 7.5 0 0015 0m-15 0a7.5 7.5 0 1115 0m-15 0H3m16.5 0H21m-1.5 0H12m-8.457 3.077l1.41-.513m14.095-5.13l1.41-.513M5.106 17.785l1.15-.964m11.49-9.642l1.149-.964M7.501 19.795l.75-1.3m7.5-12.99l.75-1.3m-6.063 16.658l.26-1.477m2.605-14.772l.26-1.477m0 17.726l-.26-1.477M10.698 4.614l-.26-1.477M16.5 19.794l-.75-1.299M7.5 4.205L12 12m0 0l4.5 7.795" />
-      </svg>
-    ),
+    title: 'Workflow Automation',
+    desc: 'HubSpot, Klaviyo, Zapier. Simple enough to maintain, structured enough to scale.',
+    img: 'https://placehold.co/480x280/eef2ff/6366f1?text=Automation\nworkflow+builder&font=montserrat',
+    imgAlt: 'Automation workflow builder',
+    size: 'large',
   },
 ];
 
@@ -132,7 +111,7 @@ const blogPosts = [
 
 const tools = [
   'HubSpot', 'Semrush', 'Ahrefs', 'Figma', 'Notion', 'Webflow',
-  'WordPress', 'Klaviyo', 'Google Analytics', 'Canva', 'Adobe Creative Suite',
+  'WordPress', 'Klaviyo', 'Google Analytics', 'Canva', 'Adobe',
 ];
 
 const faqs = [
@@ -186,7 +165,7 @@ export default function HomePage() {
         <div className="animate-float-reverse pointer-events-none absolute bottom-[5%] left-[-5%] h-[400px] w-[400px] rounded-full bg-gradient-to-tr from-purple-500/[0.06] to-blue-500/[0.03] blur-3xl" />
         <div className="dot-pattern pointer-events-none absolute inset-0 opacity-30" />
 
-        <div className="relative mx-auto max-w-6xl px-6 py-32 lg:py-0">
+        <div className="relative mx-auto max-w-6xl px-6 pt-24 pb-16 lg:pt-0 lg:pb-0">
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">
             {/* Left: Copy */}
             <div className="lg:col-span-7">
@@ -234,6 +213,24 @@ export default function HomePage() {
                   </Link>
                 </div>
               </FadeIn>
+
+              {/* Metrics strip - inline, single row */}
+              <FadeIn delay="fade-delay-4">
+                <div className="mt-16 flex items-center gap-10 border-t border-rule pt-8 md:gap-14">
+                  <div className="whitespace-nowrap">
+                    <p className="text-2xl font-bold text-heading sm:text-3xl">50+</p>
+                    <p className="mt-1 text-sm text-muted">Projects delivered</p>
+                  </div>
+                  <div className="whitespace-nowrap">
+                    <p className="text-2xl font-bold text-heading sm:text-3xl">B2B</p>
+                    <p className="mt-1 text-sm text-muted">SaaS, Fintech, Services</p>
+                  </div>
+                  <div className="whitespace-nowrap">
+                    <p className="text-2xl font-bold text-heading sm:text-3xl">100%</p>
+                    <p className="mt-1 text-sm text-muted">Remote studio</p>
+                  </div>
+                </div>
+              </FadeIn>
             </div>
 
             {/* Right: Clean transparent image space */}
@@ -252,26 +249,6 @@ export default function HomePage() {
               </FadeIn>
             </div>
           </div>
-
-          {/* Metrics strip - left side only */}
-          <FadeIn delay="fade-delay-4">
-            <div className="mt-20 max-w-md">
-              <div className="flex flex-wrap gap-10 border-t border-rule pt-10 md:gap-16">
-                <div>
-                  <p className="text-2xl font-bold text-heading sm:text-3xl">50+</p>
-                  <p className="mt-1 text-sm text-muted">Projects delivered</p>
-                </div>
-                <div>
-                  <p className="text-2xl font-bold text-heading sm:text-3xl">B2B</p>
-                  <p className="mt-1 text-sm text-muted">SaaS, Fintech, Services</p>
-                </div>
-                <div>
-                  <p className="text-2xl font-bold text-heading sm:text-3xl">100%</p>
-                  <p className="mt-1 text-sm text-muted">Remote studio</p>
-                </div>
-              </div>
-            </div>
-          </FadeIn>
         </div>
       </section>
 
@@ -291,11 +268,11 @@ export default function HomePage() {
             </p>
           </FadeIn>
 
-          {/* Tetris layout: 1 large left + 3 stacked right (matching height) */}
+          {/* Tetris layout: 1 large left + 3 stacked right (equal height) */}
           <div className="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-2">
             {/* Featured: Programs.com (large) */}
-            <FadeIn delay="fade-delay-1">
-              <div className="shine-hover group flex h-full flex-col overflow-hidden rounded-2xl border border-rule-dark bg-surface-dark-alt transition-all duration-300 hover:border-accent/30">
+            <FadeIn delay="fade-delay-1" className="flex">
+              <div className="shine-hover group flex h-full w-full flex-col overflow-hidden rounded-2xl border border-rule-dark bg-surface-dark-alt transition-all duration-300 hover:border-accent/30">
                 <div className="relative flex-1 overflow-hidden">
                   <Image
                     src={workItems[0].img}
@@ -323,11 +300,11 @@ export default function HomePage() {
               </div>
             </FadeIn>
 
-            {/* 2 smaller cards + View All CTA card - stretch to match left */}
-            <div className="flex h-full flex-col gap-6">
+            {/* 2 smaller cards + View All CTA card - stretch to fill */}
+            <div className="flex flex-col gap-6">
               {workItems.slice(1).map((item, i) => (
-                <FadeIn key={item.title} delay={`fade-delay-${i + 2}`}>
-                  <div className="shine-hover group flex flex-1 overflow-hidden rounded-2xl border border-rule-dark bg-surface-dark-alt transition-all duration-300 hover:border-accent/30">
+                <FadeIn key={item.title} delay={`fade-delay-${i + 2}`} className="flex flex-1">
+                  <div className="shine-hover group flex w-full overflow-hidden rounded-2xl border border-rule-dark bg-surface-dark-alt transition-all duration-300 hover:border-accent/30">
                     <div className="relative w-2/5 shrink-0 overflow-hidden">
                       <Image
                         src={item.img}
@@ -353,11 +330,11 @@ export default function HomePage() {
                 </FadeIn>
               ))}
 
-              {/* View all case studies card */}
-              <FadeIn delay="fade-delay-4">
+              {/* View all case studies card - flex-1 to fill remaining space */}
+              <FadeIn delay="fade-delay-4" className="flex flex-1">
                 <Link
                   href="/case-studies"
-                  className="group flex flex-1 items-center justify-between rounded-2xl border border-rule-dark bg-gradient-to-br from-accent/10 to-purple-500/5 p-6 transition-all duration-300 hover:border-accent/40 hover:from-accent/15 hover:to-purple-500/10"
+                  className="group flex w-full items-center justify-between rounded-2xl border border-rule-dark bg-gradient-to-br from-accent/10 to-purple-500/5 p-6 transition-all duration-300 hover:border-accent/40 hover:from-accent/15 hover:to-purple-500/10"
                 >
                   <div>
                     <p className="text-sm font-semibold text-white">View all case studies</p>
@@ -375,11 +352,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ══════════ WHAT WE DO (merged problems + capabilities) ══════════ */}
-      <section className="relative overflow-hidden border-b border-rule py-24 lg:py-32">
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-surface-alt via-surface to-surface-alt opacity-60" />
+      {/* ══════════ WHAT WE DO (disruptive bento with images) ══════════ */}
+      <section className="relative overflow-hidden py-24 lg:py-32">
         <div className="animate-float pointer-events-none absolute left-[-8%] top-[20%] h-[350px] w-[350px] rounded-full bg-gradient-to-br from-indigo-500/[0.05] to-violet-500/[0.03] blur-3xl" />
-        <div className="animate-float-reverse pointer-events-none absolute right-[-5%] bottom-[10%] h-[300px] w-[300px] rounded-full bg-gradient-to-tr from-purple-500/[0.04] to-blue-500/[0.02] blur-3xl" />
 
         <div className="relative mx-auto max-w-6xl px-6">
           <FadeIn>
@@ -388,41 +363,46 @@ export default function HomePage() {
                 What we do
               </p>
               <h2 className="mt-4 text-3xl font-bold sm:text-4xl">
-                Your pain points.{' '}
-                <span className="gradient-text">Our solutions.</span>
+                Everything you need.{' '}
+                <span className="gradient-text">Nothing you don&rsquo;t.</span>
               </h2>
               <p className="mt-4 text-body">
-                We sit in the gap between strategy and production. You bring the
-                expertise, we turn it into content, assets, and systems that ship.
+                Strategy is worthless without execution. We sit in the gap between
+                ideas and production, turning expertise into systems that ship.
               </p>
             </div>
           </FadeIn>
 
+          {/* Bento grid: 2 large + 4 small in asymmetric layout */}
           <div className="mt-16 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {whatWeDo.map((item, i) => (
-              <FadeIn key={item.capability} delay={`fade-delay-${(i % 5) + 1}`}>
-                <div className="group relative flex h-full flex-col rounded-2xl border border-rule bg-surface p-7 transition-all duration-300 hover:border-accent/30 hover:shadow-lg hover:shadow-accent/5">
-                  {/* Accent top bar on hover */}
-                  <div className="absolute left-0 right-0 top-0 h-[2px] rounded-t-2xl bg-gradient-to-r from-accent to-purple-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-
-                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-accent/10 to-purple-500/5 text-accent transition-colors duration-300 group-hover:from-accent group-hover:to-purple-500 group-hover:text-white">
-                    {item.icon}
+              <FadeIn
+                key={item.title}
+                delay={`fade-delay-${(i % 5) + 1}`}
+                className={item.size === 'large' ? 'sm:col-span-2 lg:col-span-1' : ''}
+              >
+                <div className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-rule bg-surface transition-all duration-300 hover:border-accent/30 hover:shadow-xl hover:shadow-accent/5">
+                  {/* Image */}
+                  <div className="relative h-44 overflow-hidden">
+                    <Image
+                      src={item.img}
+                      alt={item.imgAlt}
+                      width={480}
+                      height={280}
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
+                      unoptimized
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                   </div>
 
-                  <p className="mb-2 text-[11px] font-semibold uppercase tracking-widest text-accent">
-                    {item.capability}
-                  </p>
-
-                  <p className="text-[15px] font-semibold leading-snug text-heading">
-                    {item.pain}
-                  </p>
-
-                  <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">
-                    {item.desc}
-                  </p>
-
-                  {/* Decorative corner glow */}
-                  <div className="pointer-events-none absolute -right-8 -top-8 h-24 w-24 rounded-full bg-gradient-to-br from-accent/5 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  <div className="flex flex-1 flex-col p-6">
+                    <h3 className="text-lg font-bold text-heading">
+                      {item.title}
+                    </h3>
+                    <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">
+                      {item.desc}
+                    </p>
+                  </div>
                 </div>
               </FadeIn>
             ))}
@@ -431,7 +411,7 @@ export default function HomePage() {
       </section>
 
       {/* ══════════ HOW WE WORK ══════════ */}
-      <section className="border-b border-rule py-24 lg:py-32">
+      <section className="border-t border-b border-rule py-24 lg:py-32">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-12">
             <div className="lg:col-span-5">
@@ -488,65 +468,89 @@ export default function HomePage() {
       </section>
 
       {/* ══════════ TOOLS & TECH ══════════ */}
-      <section className="border-b border-rule py-24 lg:py-32">
+      <section className="py-24 lg:py-32">
         <div className="mx-auto max-w-6xl px-6">
           <FadeIn>
-            <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-2">
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-widest text-accent">
-                  Tools & Technology
-                </p>
-                <h2 className="mt-4 text-3xl font-bold sm:text-4xl">
-                  We work inside your stack.
-                </h2>
-                <p className="mt-4 text-body">
-                  We integrate with the tools your team already uses. No new platforms to learn, no migration headaches.
-                </p>
+            <div className="text-center mb-14">
+              <p className="text-xs font-semibold uppercase tracking-widest text-accent">
+                Tools & Technology
+              </p>
+              <h2 className="mt-4 text-3xl font-bold sm:text-4xl">
+                We work inside your stack.
+              </h2>
+              <p className="mt-4 mx-auto max-w-lg text-body">
+                No new platforms to learn, no migration headaches. We plug into
+                the tools your team already uses.
+              </p>
+            </div>
+          </FadeIn>
 
-                {/* LiteRanker partnership - enhanced */}
-                <div className="mt-10 overflow-hidden rounded-2xl border border-accent/30 bg-gradient-to-br from-accent-subtle to-purple-500/[0.04]">
-                  <div className="border-b border-accent/10 bg-accent/[0.04] px-6 py-3">
-                    <p className="text-[11px] font-semibold uppercase tracking-widest text-accent">Strategic Partnership</p>
-                  </div>
-                  <div className="p-6">
-                    <div className="flex items-center gap-4">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-accent to-purple-500 text-white font-bold text-sm shadow-lg shadow-accent/20">
-                        HI
-                      </div>
-                      <svg className="h-5 w-5 text-accent/50" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
-                      </svg>
-                      <Image
-                        src="https://placehold.co/100x40/transparent/6366f1?text=LiteRanker&font=montserrat"
-                        alt="LiteRanker logo"
-                        width={100}
-                        height={40}
-                        unoptimized
-                      />
-                    </div>
-                    <div className="mt-4">
-                      <p className="text-sm font-semibold text-heading">SEO Content Operations Partner</p>
-                      <p className="mt-1 text-sm leading-relaxed text-muted">
-                        From keyword research to content production, we combine LiteRanker&rsquo;s technical SEO expertise with our editorial and creative execution.
-                      </p>
-                    </div>
-                  </div>
+          <FadeIn delay="fade-delay-1">
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+              {tools.map((tool) => (
+                <div
+                  key={tool}
+                  className="flex items-center justify-center rounded-2xl border border-rule bg-surface p-5 text-sm font-medium text-muted transition-all duration-200 hover:border-accent/20 hover:text-heading"
+                >
+                  {tool}
                 </div>
+              ))}
+              <div className="flex items-center justify-center rounded-2xl border border-dashed border-accent/30 bg-accent-subtle p-5 text-sm font-semibold text-accent">
+                +20 more tools
               </div>
+            </div>
+          </FadeIn>
 
-              <div>
-                <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-                  {tools.map((tool) => (
-                    <div
-                      key={tool}
-                      className="flex items-center justify-center rounded-2xl border border-rule bg-surface p-5 text-sm font-medium text-muted transition-all duration-200 hover:border-accent/20 hover:text-heading"
-                    >
-                      {tool}
-                    </div>
-                  ))}
-                  {/* +20 more tools card */}
-                  <div className="flex items-center justify-center rounded-2xl border border-dashed border-accent/30 bg-accent-subtle p-5 text-sm font-semibold text-accent">
-                    +20 more tools
+          {/* LiteRanker partnership - floating visual */}
+          <FadeIn delay="fade-delay-2">
+            <div className="relative mt-16 overflow-hidden rounded-3xl bg-gradient-to-br from-surface-dark via-[#12121a] to-surface-dark p-10 lg:p-14">
+              {/* Floating decorative elements */}
+              <div className="animate-float pointer-events-none absolute -right-8 -top-8 h-40 w-40 rounded-full bg-gradient-to-br from-accent/20 to-purple-500/10 blur-2xl" />
+              <div className="animate-float-reverse pointer-events-none absolute -bottom-6 -left-6 h-32 w-32 rounded-full bg-gradient-to-tr from-purple-500/15 to-accent/10 blur-2xl" />
+
+              <div className="relative grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
+                <div>
+                  <p className="text-[11px] font-semibold uppercase tracking-widest text-accent-light">
+                    Strategic Partnership
+                  </p>
+                  <h3 className="mt-3 text-2xl font-bold text-white sm:text-3xl">
+                    HookImpact <span className="text-accent-light">&times;</span> LiteRanker
+                  </h3>
+                  <p className="mt-4 text-sm leading-relaxed text-white/60">
+                    From keyword research to content production, we combine
+                    LiteRanker&rsquo;s technical SEO expertise with our editorial
+                    and creative execution. Together, we deliver end-to-end SEO
+                    content operations for B2B teams.
+                  </p>
+                  <Link
+                    href="/services"
+                    className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-accent-light transition-colors hover:text-white"
+                  >
+                    Learn more
+                    <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </Link>
+                </div>
+
+                <div className="flex items-center justify-center gap-8 lg:justify-end">
+                  <div className="animate-float flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-accent to-purple-500 text-2xl font-bold text-white shadow-2xl shadow-accent/30">
+                    HI
+                  </div>
+                  <div className="flex flex-col items-center gap-1">
+                    <div className="h-px w-12 bg-gradient-to-r from-transparent via-accent-light/50 to-transparent" />
+                    <span className="text-xs text-white/30">+</span>
+                    <div className="h-px w-12 bg-gradient-to-r from-transparent via-accent-light/50 to-transparent" />
+                  </div>
+                  <div className="animate-float-reverse">
+                    <Image
+                      src="https://placehold.co/160x64/transparent/818cf8?text=LiteRanker&font=montserrat"
+                      alt="LiteRanker logo"
+                      width={160}
+                      height={64}
+                      className="drop-shadow-lg"
+                      unoptimized
+                    />
                   </div>
                 </div>
               </div>
@@ -556,7 +560,7 @@ export default function HomePage() {
       </section>
 
       {/* ══════════ LATEST FROM THE BLOG ══════════ */}
-      <section className="border-b border-rule bg-surface-alt py-24 lg:py-32">
+      <section className="border-t border-b border-rule bg-surface-alt py-24 lg:py-32">
         <div className="mx-auto max-w-6xl px-6">
           <FadeIn>
             <div className="text-center mb-14">
@@ -607,7 +611,6 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl px-6">
           <FadeIn>
             <div className="grid grid-cols-1 items-center gap-8 py-16 lg:grid-cols-12 lg:py-20">
-              {/* Left: big text */}
               <div className="lg:col-span-4">
                 <h2 className="text-3xl font-bold text-white sm:text-4xl leading-[1.1]">
                   Ready to build a{' '}
@@ -615,7 +618,6 @@ export default function HomePage() {
                 </h2>
               </div>
 
-              {/* Middle: copy + button */}
               <div className="lg:col-span-4">
                 <p className="text-sm leading-relaxed text-white/70">
                   Tell us about your goals and constraints. We will respond with
@@ -629,7 +631,6 @@ export default function HomePage() {
                 </Link>
               </div>
 
-              {/* Right: tilted breakout image 3:4 - overflows above/below */}
               <div className="relative hidden lg:col-span-4 lg:flex lg:justify-end">
                 <div className="relative -my-28 z-30">
                   <Image
