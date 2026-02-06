@@ -4,7 +4,7 @@ import Link from 'next/link';
 import FadeIn from '../components/FadeIn';
 
 export const metadata: Metadata = {
-  title: 'Case Studies — HookImpact',
+  title: 'Case Studies | HookImpact',
   description:
     'Detailed case studies showing how we build content systems, campaign assets, SEO operations, and event collateral for B2B teams.',
 };
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function CaseStudiesPage() {
   return (
     <>
-      {/* ─── Header ─── */}
+      {/* Header */}
       <section className="relative overflow-hidden border-b border-rule pt-28 lg:pt-36">
         <div className="dot-pattern pointer-events-none absolute inset-0 opacity-20" />
         <div className="relative mx-auto max-w-6xl px-6 pb-20 lg:pb-28">
@@ -27,7 +27,7 @@ export default function CaseStudiesPage() {
           </FadeIn>
           <FadeIn delay="fade-delay-1">
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-body">
-              We don&rsquo;t believe in generic portfolios. These are detailed
+              We do not believe in generic portfolios. These are detailed
               breakdowns of how we helped B2B teams build systems, ship assets,
               and maintain quality at scale.
             </p>
@@ -35,10 +35,9 @@ export default function CaseStudiesPage() {
         </div>
       </section>
 
-      {/* ══════════ CASE STUDY 1: Programs.com ══════════ */}
+      {/* CASE STUDY 1: Programs.com */}
       <section className="border-b border-rule py-24 lg:py-32">
         <div className="mx-auto max-w-6xl px-6">
-          {/* Hero image — full width banner */}
           <FadeIn>
             <div className="overflow-hidden rounded-2xl shadow-xl">
               <Image
@@ -53,7 +52,6 @@ export default function CaseStudiesPage() {
           </FadeIn>
 
           <div className="mt-14 grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-20">
-            {/* Left: Project info */}
             <div className="lg:col-span-4">
               <FadeIn>
                 <div className="space-y-6">
@@ -76,7 +74,6 @@ export default function CaseStudiesPage() {
                       <p className="mt-1 text-sm text-heading">Social Content System, Visual Design, Editorial Strategy</p>
                     </div>
                   </div>
-                  {/* Logos */}
                   <div className="flex flex-wrap items-center gap-4 border-t border-rule pt-6">
                     <Image
                       src="https://placehold.co/100x32/f4f4f5/52525b?text=Programs.com&font=montserrat"
@@ -104,7 +101,6 @@ export default function CaseStudiesPage() {
               </FadeIn>
             </div>
 
-            {/* Right: Story */}
             <div className="lg:col-span-8">
               <FadeIn delay="fade-delay-1">
                 <div className="space-y-8">
@@ -133,7 +129,6 @@ export default function CaseStudiesPage() {
                     </p>
                   </div>
 
-                  {/* Detail images — alternating layout */}
                   <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                     <div className="img-float overflow-hidden rounded-xl shadow-md">
                       <Image
@@ -163,13 +158,12 @@ export default function CaseStudiesPage() {
                       Programs.com established a consistent, recognizable social
                       presence that educated senior audiences without
                       oversimplifying. The content system we built became the
-                      engine — repeatable, scalable, and tied to a clear
+                      engine: repeatable, scalable, and tied to a clear
                       editorial standard that the internal team could maintain and
                       expand.
                     </p>
                   </div>
 
-                  {/* Full-width detail image */}
                   <div className="img-angled overflow-hidden rounded-xl shadow-lg">
                     <Image
                       src="https://placehold.co/800x400/f4f4f5/52525b?text=Angled+image+here\nshowing+full+carousel+spread\nwith+6-8+slides+visible&font=montserrat"
@@ -187,11 +181,10 @@ export default function CaseStudiesPage() {
         </div>
       </section>
 
-      {/* ══════════ CASE STUDY 2: TouchSuite ══════════ */}
+      {/* CASE STUDY 2: TouchSuite */}
       <section className="border-b border-rule bg-surface-alt py-24 lg:py-32">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-12 lg:gap-20">
-            {/* Left: Image composition */}
             <div className="lg:col-span-6">
               <FadeIn>
                 <div className="relative">
@@ -205,7 +198,6 @@ export default function CaseStudiesPage() {
                       unoptimized
                     />
                   </div>
-                  {/* Overlapping smaller image */}
                   <div className="absolute -bottom-6 -right-6 z-10 overflow-hidden rounded-xl shadow-xl">
                     <Image
                       src="https://placehold.co/240x180/eef2ff/6366f1?text=Ad+creative\nvariation+preview&font=montserrat"
@@ -220,7 +212,6 @@ export default function CaseStudiesPage() {
               </FadeIn>
             </div>
 
-            {/* Right: Content */}
             <div className="lg:col-span-6">
               <FadeIn delay="fade-delay-1">
                 <p className="text-xs font-semibold uppercase tracking-widest text-accent">Case Study</p>
@@ -238,10 +229,10 @@ export default function CaseStudiesPage() {
                     <h3 className="text-lg font-bold">The Challenge</h3>
                     <p className="mt-2 text-base leading-relaxed text-body">
                       TouchSuite needed to scale their demand generation with
-                      consistent, professional campaign assets — but their
+                      consistent, professional campaign assets, but their
                       marketing output looked fragmented. Different designers,
                       different styles, and no unified system. The sales team
-                      was asking for materials that didn&rsquo;t exist, and
+                      was asking for materials that did not exist, and
                       launches kept getting delayed by creative bottlenecks.
                     </p>
                   </div>
@@ -261,7 +252,6 @@ export default function CaseStudiesPage() {
             </div>
           </div>
 
-          {/* Extra images row */}
           <FadeIn delay="fade-delay-2">
             <div className="mt-16 grid grid-cols-1 gap-4 sm:grid-cols-3">
               <div className="img-float overflow-hidden rounded-xl shadow-md">
@@ -299,11 +289,10 @@ export default function CaseStudiesPage() {
         </div>
       </section>
 
-      {/* ══════════ CASE STUDY 3: Literanker ══════════ */}
+      {/* CASE STUDY 3: Literanker */}
       <section className="border-b border-rule py-24 lg:py-32">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-12 lg:gap-20">
-            {/* Left: Content */}
             <div className="lg:col-span-6">
               <FadeIn>
                 <p className="text-xs font-semibold uppercase tracking-widest text-accent">Case Study</p>
@@ -322,10 +311,10 @@ export default function CaseStudiesPage() {
                     <p className="mt-2 text-base leading-relaxed text-body">
                       Literanker needed to scale SEO content production without
                       sacrificing quality. Their existing process was manual,
-                      inconsistent, and couldn&rsquo;t keep up with the volume
+                      inconsistent, and could not keep up with the volume
                       required to compete in their market. Content briefs were
                       ad hoc, editorial standards varied by writer, and
-                      published pages weren&rsquo;t being refreshed as search
+                      published pages were not being refreshed as search
                       intent evolved.
                     </p>
                   </div>
@@ -355,7 +344,6 @@ export default function CaseStudiesPage() {
               </FadeIn>
             </div>
 
-            {/* Right: Image composition */}
             <div className="lg:col-span-6">
               <FadeIn delay="fade-delay-2">
                 <div className="relative">
@@ -386,10 +374,9 @@ export default function CaseStudiesPage() {
         </div>
       </section>
 
-      {/* ══════════ CASE STUDY 4: Continuum ══════════ */}
+      {/* CASE STUDY 4: Continuum */}
       <section className="dark-section border-b border-rule-dark bg-surface-dark py-24 lg:py-32">
         <div className="mx-auto max-w-6xl px-6">
-          {/* Full-width hero image */}
           <FadeIn>
             <div className="overflow-hidden rounded-2xl shadow-xl">
               <Image
@@ -435,7 +422,7 @@ export default function CaseStudiesPage() {
                     <p className="mt-3 text-base leading-relaxed">
                       Continuum needed professional event collateral for multiple
                       trade shows and corporate events, but their existing
-                      materials were inconsistent and didn&rsquo;t meet the
+                      materials were inconsistent and did not meet the
                       production standards required for large-format printing and
                       professional booth installations. The brand needed to look
                       established, cohesive, and credible in rooms full of
@@ -455,7 +442,6 @@ export default function CaseStudiesPage() {
                     </p>
                   </div>
 
-                  {/* Detail images */}
                   <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                     <div className="img-float overflow-hidden rounded-xl shadow-lg">
                       <Image
@@ -490,7 +476,6 @@ export default function CaseStudiesPage() {
                     </p>
                   </div>
 
-                  {/* Wide angled image */}
                   <div className="img-angled-reverse overflow-hidden rounded-xl shadow-lg">
                     <Image
                       src="https://placehold.co/800x400/27272a/818cf8?text=Angled+image+here\nshowing+full+event+setup\nwith+all+collateral+pieces+visible&font=montserrat"
@@ -508,7 +493,7 @@ export default function CaseStudiesPage() {
         </div>
       </section>
 
-      {/* ─── CTA ─── */}
+      {/* CTA */}
       <section className="py-24 lg:py-32">
         <div className="mx-auto max-w-6xl px-6">
           <FadeIn>
@@ -518,7 +503,7 @@ export default function CaseStudiesPage() {
               </h2>
               <p className="mt-5 text-lg leading-relaxed text-body">
                 We share curated samples after a short call, because context
-                matters. Tell us what you&rsquo;re building and we&rsquo;ll show
+                matters. Tell us what you are building and we will show
                 you exactly what applies.
               </p>
               <div className="mt-8 flex flex-wrap justify-center gap-4">

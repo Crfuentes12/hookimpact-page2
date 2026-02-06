@@ -1,9 +1,11 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import FadeIn from '../components/FadeIn';
+import FAQAccordion from '../components/FAQAccordion';
 
 export const metadata: Metadata = {
-  title: 'Services — HookImpact',
+  title: 'Services | HookImpact',
   description:
     'Marketing execution designed to hold up in B2B environments. Content systems, creative production, event collateral, and marketing operations.',
 };
@@ -36,19 +38,23 @@ const services = [
   {
     num: '05',
     title: 'Marketing operations and automation support',
-    body: 'Content becomes far more valuable when it connects to a system. We support the operational layer that turns assets into outcomes, including email campaign support, CRM workflow support, and marketing automation setup where it makes sense. We work inside tools like HubSpot and Klaviyo depending on the client\u2019s stack, and we design automation flows that are simple enough to maintain, but structured enough to scale. The goal is not to add complexity. The goal is to remove friction and make marketing execution more consistent.',
+    body: 'Content becomes far more valuable when it connects to a system. We support the operational layer that turns assets into outcomes, including email campaign support, CRM workflow support, and marketing automation setup where it makes sense. We work inside tools like HubSpot and Klaviyo depending on the client\'s stack, and we design automation flows that are simple enough to maintain, but structured enough to scale. The goal is not to add complexity. The goal is to remove friction and make marketing execution more consistent.',
     accent: 'from-purple-500 to-violet-500',
   },
 ];
 
+const tools = [
+  'HubSpot', 'Semrush', 'Ahrefs', 'Figma', 'Notion', 'Webflow', 'WordPress', 'Klaviyo', 'Google Analytics', 'Canva', 'Slack', 'Zapier',
+];
+
 const faqs = [
   {
-    q: 'How does engagement typically work?',
+    q: 'How does an engagement typically work?',
     a: 'We work in two modes: a monthly retainer where we own a defined scope and cadence, or a focused project for a campaign, launch, or specific initiative. Both start with a short discovery to clarify goals, constraints, and voice. Then we propose an execution plan with a realistic schedule, clear responsibilities, and a quality standard we hold.',
   },
   {
     q: 'How does pricing work?',
-    a: 'We don\u2019t publish fixed pricing because the difference between "two posts per week" and "a content engine tied to funnel metrics" is massive. After a short call, we provide a clear range and a scope that matches what you actually need. If you want a lightweight starting point, we can begin with a short paid trial project to prove fit and working rhythm.',
+    a: 'We don\'t publish fixed pricing because the difference between "two posts per week" and "a content engine tied to funnel metrics" is massive. After a short call, we provide a clear range and a scope that matches what you actually need. If you want a lightweight starting point, we can begin with a short paid trial project to prove fit and working rhythm.',
   },
   {
     q: 'What does a starter engagement look like?',
@@ -58,14 +64,23 @@ const faqs = [
     q: 'What about a full operations engagement?',
     a: 'A full engagement includes multi-channel content production, campaign support, landing page and creative production, and ongoing operational work in email and CRM systems. The purpose is to reduce internal burden and create a reliable engine that can scale.',
   },
+  {
+    q: 'Do you use AI in your work?',
+    a: 'Yes, responsibly. We use AI to accelerate research, drafting, and ideation. But every deliverable goes through a strong human editorial layer for quality, accuracy, and brand voice. AI is a tool in the process, not the process itself.',
+  },
+  {
+    q: 'Can you work with our existing brand guidelines?',
+    a: 'Absolutely. We design within your existing brand system or help build one if you need it. Our goal is to make your marketing output feel like one brand across every channel and touchpoint.',
+  },
 ];
 
 export default function ServicesPage() {
   return (
     <>
-      {/* ─── Header ─── */}
+      {/* Header */}
       <section className="relative overflow-hidden border-b border-rule pt-28 lg:pt-36">
         <div className="dot-pattern pointer-events-none absolute inset-0 opacity-20" />
+        <div className="animate-float pointer-events-none absolute right-[-10%] top-[10%] h-[400px] w-[400px] rounded-full bg-gradient-to-br from-indigo-500/[0.06] to-violet-500/[0.03] blur-3xl" />
         <div className="relative mx-auto max-w-6xl px-6 pb-20 lg:pb-28">
           <FadeIn>
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent-subtle px-4 py-1.5">
@@ -73,20 +88,20 @@ export default function ServicesPage() {
               <span className="text-xs font-semibold tracking-wide text-accent">Services</span>
             </div>
             <h1 className="max-w-3xl text-4xl font-bold sm:text-5xl">
-              What we deliver
+              Marketing execution that actually holds up.
             </h1>
           </FadeIn>
           <FadeIn delay="fade-delay-1">
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-body">
-              Marketing execution designed to hold up in B2B environments. Content
-              that doesn&rsquo;t oversimplify, design that doesn&rsquo;t look
-              templated, and workflows that don&rsquo;t fall apart when you get busy.
+              Content that does not oversimplify. Design that does not look
+              templated. Workflows that do not fall apart when you get busy.
+              Built for B2B teams that care about credibility.
             </p>
           </FadeIn>
         </div>
       </section>
 
-      {/* ─── Services ─── */}
+      {/* Services */}
       {services.map((service) => (
         <section key={service.num} className="border-b border-rule">
           <div className="mx-auto max-w-6xl px-6 py-20 lg:py-24">
@@ -111,35 +126,96 @@ export default function ServicesPage() {
         </section>
       ))}
 
-      {/* ─── FAQs ─── */}
-      <section className="bg-surface-alt py-24 lg:py-32">
+      {/* Tools & Technology */}
+      <section className="border-b border-rule bg-surface-alt py-24 lg:py-32">
         <div className="mx-auto max-w-6xl px-6">
           <FadeIn>
-            <p className="text-xs font-semibold uppercase tracking-widest text-accent">
-              FAQ
-            </p>
-            <h2 className="mt-4 text-3xl font-bold sm:text-4xl">
-              Common questions
-            </h2>
-          </FadeIn>
+            <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-2">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-widest text-accent">
+                  Tools & Technology
+                </p>
+                <h2 className="mt-4 text-3xl font-bold sm:text-4xl">
+                  We work inside your stack.
+                </h2>
+                <p className="mt-4 text-body">
+                  No new platforms to learn, no migration headaches. We plug into the tools your team already uses and make them work harder.
+                </p>
 
-          <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2">
-            {faqs.map((faq, i) => (
-              <FadeIn key={faq.q} delay={`fade-delay-${i + 1}`}>
-                <div className="rounded-2xl border border-rule bg-surface p-8 transition-all duration-300 hover:border-accent/20 hover:shadow-sm">
-                  <h3 className="text-[15px] font-semibold">{faq.q}</h3>
-                  <p className="mt-4 text-sm leading-relaxed text-muted">
-                    {faq.a}
-                  </p>
+                {/* Literanker partnership */}
+                <div className="mt-10 rounded-2xl border border-accent/20 bg-surface p-6">
+                  <div className="flex items-center gap-5">
+                    <div className="flex items-center gap-4">
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent text-white font-bold text-sm">
+                        HI
+                      </div>
+                      <svg className="h-5 w-5 text-accent shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                      </svg>
+                      <Image
+                        src="https://placehold.co/100x40/transparent/6366f1?text=Literanker&font=montserrat"
+                        alt="Literanker logo"
+                        width={100}
+                        height={40}
+                        className="shrink-0"
+                        unoptimized
+                      />
+                    </div>
+                  </div>
+                  <div className="mt-4">
+                    <p className="text-sm font-semibold text-heading">SEO Content Partner</p>
+                    <p className="mt-1 text-sm leading-relaxed text-muted">
+                      Our strategic partnership with Literanker powers our SEO content operations. From keyword research to content production, we combine their technical SEO expertise with our editorial and creative execution.
+                    </p>
+                  </div>
                 </div>
+              </div>
+
+              <div>
+                <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+                  {tools.map((tool) => (
+                    <div
+                      key={tool}
+                      className="flex items-center justify-center rounded-2xl border border-rule bg-surface p-5 text-sm font-medium text-muted transition-all duration-200 hover:border-accent/20 hover:text-heading"
+                    >
+                      {tool}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* FAQs */}
+      <section className="py-24 lg:py-32">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-20">
+            <div className="lg:col-span-4">
+              <FadeIn>
+                <p className="text-xs font-semibold uppercase tracking-widest text-accent">
+                  FAQ
+                </p>
+                <h2 className="mt-4 text-3xl font-bold sm:text-4xl">
+                  Common questions
+                </h2>
+                <p className="mt-4 text-body">
+                  What you need to know about working with us.
+                </p>
               </FadeIn>
-            ))}
+            </div>
+            <div className="lg:col-span-8">
+              <FadeIn delay="fade-delay-1">
+                <FAQAccordion items={faqs} />
+              </FadeIn>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ─── CTA ─── */}
-      <section className="py-24 lg:py-32">
+      {/* CTA */}
+      <section className="border-t border-rule py-24 lg:py-32">
         <div className="mx-auto max-w-6xl px-6">
           <FadeIn>
             <div className="mx-auto max-w-2xl text-center">
@@ -147,7 +223,7 @@ export default function ServicesPage() {
                 Ready to build a reliable engine?
               </h2>
               <p className="mt-5 text-lg text-body">
-                Tell us about your goals and constraints. We&rsquo;ll respond
+                Tell us about your goals and constraints. We will respond
                 with a clear recommendation.
               </p>
               <div className="mt-8">

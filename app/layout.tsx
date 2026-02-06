@@ -4,7 +4,7 @@ import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 
 export const metadata: Metadata = {
-  title: 'HookImpact — Content & Creative Operations Studio',
+  title: 'HookImpact | Content & Creative Operations Studio',
   description:
     'HookImpact is a content and creative operations studio for B2B teams that need consistency, clarity, and output.',
 };
