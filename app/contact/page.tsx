@@ -3,7 +3,7 @@ import FadeIn from '../components/FadeIn';
 import ContactForm from '../components/ContactForm';
 
 export const metadata: Metadata = {
-  title: 'Contact — HookImpact',
+  title: 'Contact | HookImpact',
   description:
     'Tell us what you are trying to achieve. We reply within two business days.',
 };
@@ -11,9 +11,10 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      {/* ─── Header ─── */}
+      {/* Header */}
       <section className="relative overflow-hidden border-b border-rule pt-28 lg:pt-36">
         <div className="dot-pattern pointer-events-none absolute inset-0 opacity-20" />
+        <div className="animate-float-reverse pointer-events-none absolute right-[-8%] top-[15%] h-[350px] w-[350px] rounded-full bg-gradient-to-br from-indigo-500/[0.06] to-purple-500/[0.03] blur-3xl" />
         <div className="relative mx-auto max-w-6xl px-6 pb-20 lg:pb-28">
           <FadeIn>
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent-subtle px-4 py-1.5">
@@ -26,59 +27,72 @@ export default function ContactPage() {
           </FadeIn>
           <FadeIn delay="fade-delay-1">
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-body">
-              Tell us what you&rsquo;re building, what&rsquo;s blocking
-              execution, and where you want to go. If it&rsquo;s a fit,
-              we&rsquo;ll propose a clear starting scope.
+              Tell us what you are building, what is blocking execution, and
+              where you want to go. If it is a fit, we will propose a clear
+              starting scope.
             </p>
           </FadeIn>
         </div>
       </section>
 
-      {/* ─── Form section ─── */}
+      {/* Form section */}
       <section className="py-20 lg:py-28">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-20">
             {/* Sidebar */}
             <div className="lg:col-span-4">
               <FadeIn>
-                <div className="space-y-8">
-                  <div className="rounded-2xl border border-rule bg-surface-alt p-6">
-                    <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-lg bg-accent-subtle">
-                      <svg className="h-4 w-4 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <div className="space-y-6">
+                  <div className="card-hover rounded-2xl border border-rule bg-surface-alt p-6">
+                    <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-accent/10 to-purple-500/5">
+                      <svg className="h-5 w-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                     </div>
                     <p className="text-sm font-semibold text-heading">Response time</p>
-                    <p className="mt-1.5 text-sm leading-relaxed text-muted">
+                    <p className="mt-2 text-sm leading-relaxed text-muted">
                       We reply within two business days. Flag time-sensitive
-                      projects and we&rsquo;ll be direct about capacity.
+                      projects and we will be direct about capacity.
                     </p>
                   </div>
 
-                  <div className="rounded-2xl border border-rule bg-surface-alt p-6">
-                    <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-lg bg-accent-subtle">
-                      <svg className="h-4 w-4 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  <div className="card-hover rounded-2xl border border-rule bg-surface-alt p-6">
+                    <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-accent/10 to-purple-500/5">
+                      <svg className="h-5 w-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                       </svg>
                     </div>
                     <p className="text-sm font-semibold text-heading">Email directly</p>
                     <a
                       href="mailto:hello@hookimpact.com"
-                      className="mt-1.5 block text-sm text-accent transition-colors hover:text-accent-hover"
+                      className="mt-2 block text-sm text-accent transition-colors hover:text-accent-hover"
                     >
                       hello@hookimpact.com
                     </a>
                   </div>
 
-                  <div className="rounded-2xl border border-rule bg-surface-alt p-6">
-                    <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-lg bg-accent-subtle">
-                      <svg className="h-4 w-4 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <div className="card-hover rounded-2xl border border-rule bg-surface-alt p-6">
+                    <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-accent/10 to-purple-500/5">
+                      <svg className="h-5 w-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                      </svg>
+                    </div>
+                    <p className="text-sm font-semibold text-heading">Location</p>
+                    <p className="mt-2 text-sm leading-relaxed text-muted">
+                      Based in Valencia, Spain. Working globally with remote B2B teams.
+                    </p>
+                  </div>
+
+                  <div className="card-hover rounded-2xl border border-rule bg-surface-alt p-6">
+                    <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-accent/10 to-purple-500/5">
+                      <svg className="h-5 w-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                       </svg>
                     </div>
                     <p className="text-sm font-semibold text-heading">Prefer a call?</p>
-                    <p className="mt-1.5 text-sm leading-relaxed text-muted">
-                      Mention it in your message and we&rsquo;ll send a
+                    <p className="mt-2 text-sm leading-relaxed text-muted">
+                      Mention it in your message and we will send a
                       scheduling link.
                     </p>
                   </div>
@@ -103,13 +117,13 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* ─── Closing ─── */}
+      {/* Closing */}
       <section className="border-t border-rule">
         <div className="mx-auto max-w-6xl px-6 py-12">
           <FadeIn>
             <p className="text-center text-sm text-muted">
               We prefer simple, professional communication and clear
-              expectations. If that&rsquo;s how you work too, you&rsquo;ll like
+              expectations. If that is how you work too, you will like
               the process.
             </p>
           </FadeIn>
