@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import FadeIn from '../components/FadeIn';
+import FAQAccordion from '../components/FAQAccordion';
 
 export const metadata: Metadata = {
   title: 'Case Studies | HookImpact',
@@ -493,38 +494,95 @@ export default function CaseStudiesPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-24 lg:py-32">
+      {/* CTA Stripe */}
+      <section className="dark-section relative z-20 overflow-visible bg-gradient-to-r from-[#0c0c14] via-surface-dark to-[#0c0c14]">
         <div className="mx-auto max-w-6xl px-6">
           <FadeIn>
-            <div className="mx-auto max-w-2xl text-center">
-              <h2 className="text-3xl font-bold sm:text-4xl">
-                Want to see work relevant to your industry?
-              </h2>
-              <p className="mt-5 text-lg leading-relaxed text-body">
-                We share curated samples after a short call, because context
-                matters. Tell us what you are building and we will show
-                you exactly what applies.
-              </p>
-              <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <div className="grid grid-cols-1 items-center gap-8 py-16 lg:grid-cols-12 lg:py-20">
+              <div className="lg:col-span-5">
+                <h2 className="text-3xl font-bold text-white sm:text-4xl leading-[1.1]">
+                  Want to see work{' '}
+                  <span className="gradient-text">relevant to you?</span>
+                </h2>
+              </div>
+
+              <div className="lg:col-span-4">
+                <p className="text-sm leading-relaxed text-white/70">
+                  We share curated samples after a short call, because context
+                  matters. Tell us what you are building and we will show you
+                  exactly what applies.
+                </p>
                 <Link
                   href="/contact"
-                  className="btn-glow inline-flex items-center gap-2 rounded-xl bg-accent px-7 py-3.5 text-sm font-semibold text-white transition-all duration-200 hover:bg-accent-hover hover:shadow-xl hover:shadow-accent/20"
+                  className="btn-glow mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-accent to-purple-500 px-7 py-3 text-sm font-semibold text-white transition-all duration-200 hover:shadow-xl hover:shadow-accent/25"
                 >
-                  Start a conversation
-                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                  </svg>
+                  Let&rsquo;s Talk Now
                 </Link>
-                <Link
-                  href="/services"
-                  className="inline-flex items-center gap-2 rounded-xl border border-rule px-7 py-3.5 text-sm font-semibold text-heading transition-all duration-200 hover:border-accent/30 hover:bg-accent-subtle"
-                >
-                  See our services
-                </Link>
+              </div>
+
+              <div className="relative hidden lg:col-span-3 lg:flex lg:justify-end">
+                <div className="relative -my-28 z-30">
+                  <Image
+                    src="https://placehold.co/280x370/eef2ff/6366f1?text=Project\nsamples\n3:4+format&font=montserrat"
+                    alt="HookImpact project samples"
+                    width={280}
+                    height={370}
+                    className="w-[240px] rotate-3 rounded-2xl shadow-2xl shadow-black/40 transition-transform duration-500 hover:rotate-1"
+                    unoptimized
+                  />
+                </div>
               </div>
             </div>
           </FadeIn>
+        </div>
+      </section>
+
+      {/* FAQ - adapted for case studies */}
+      <section className="py-24 lg:py-32">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-20">
+            <div className="lg:col-span-4">
+              <FadeIn>
+                <p className="text-xs font-semibold uppercase tracking-widest text-accent">
+                  FAQ
+                </p>
+                <h2 className="mt-4 text-3xl font-bold sm:text-4xl">
+                  About our work
+                </h2>
+                <p className="mt-4 text-body">
+                  Questions we hear when teams review our case studies.
+                </p>
+              </FadeIn>
+            </div>
+            <div className="lg:col-span-8">
+              <FadeIn delay="fade-delay-1">
+                <FAQAccordion
+                  items={[
+                    {
+                      q: 'Can I see samples relevant to my industry?',
+                      a: 'Yes. After a short call to understand your context, we share curated examples that match your industry, audience, and the type of work you need. We do not send generic decks.',
+                    },
+                    {
+                      q: 'How long do projects like these typically take?',
+                      a: 'It depends on scope. A content system setup takes 2-4 weeks to establish the foundation. Campaign asset production can start delivering within the first week. We always provide a realistic timeline before we start.',
+                    },
+                    {
+                      q: 'Do you only work with B2B companies?',
+                      a: 'Our focus is B2B because that is where our experience runs deepest. SaaS, fintech, professional services, cybersecurity, and technical industries. If your audience is senior and your content needs to be credible, we are a good fit.',
+                    },
+                    {
+                      q: 'What does a typical retainer include?',
+                      a: 'It varies by client. A starter retainer might cover LinkedIn content for one channel. A full engagement can include multi-channel content, campaign assets, email, and CRM work. We scope based on what you actually need, not a fixed package.',
+                    },
+                    {
+                      q: 'Can you work alongside our internal team?',
+                      a: 'Absolutely. We often work as an extension of in-house marketing teams, filling gaps in content production, creative execution, or operational capacity. We adapt to your workflows and tools.',
+                    },
+                  ]}
+                />
+              </FadeIn>
+            </div>
+          </div>
         </div>
       </section>
     </>

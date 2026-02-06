@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import FadeIn from '../components/FadeIn';
 
 export const metadata: Metadata = {
@@ -98,20 +97,6 @@ export default function BlogPage() {
             ))}
           </div>
 
-          <FadeIn delay="fade-delay-2">
-            <div className="mt-16 rounded-2xl border border-accent/20 bg-accent-subtle p-10 text-center">
-              <h3 className="text-xl font-bold">Articles are on the way</h3>
-              <p className="mx-auto mt-3 max-w-lg text-sm leading-relaxed text-muted">
-                We are preparing our first batch of articles. Want to be notified when they go live? Drop us a line.
-              </p>
-              <Link
-                href="/contact"
-                className="btn-glow mt-6 inline-flex items-center gap-2 rounded-xl bg-accent px-7 py-3.5 text-sm font-semibold text-white transition-all duration-200 hover:bg-accent-hover"
-              >
-                Get notified
-              </Link>
-            </div>
-          </FadeIn>
         </div>
       </section>
     </>
