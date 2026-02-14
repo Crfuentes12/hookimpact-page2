@@ -16,7 +16,7 @@ const workItems = [
     title: 'Programs.com',
     subtitle: 'Founded by Brian Dean (Backlinko, acquired by Semrush)',
     desc: 'Built the social content engine for a cybersecurity venture. LinkedIn carousels, editorial frameworks, and a tight visual standard at the level the Backlinko audience expects.',
-    img: 'https://placehold.co/700x460/1a1a2e/818cf8?text=LinkedIn+carousel\ndesigns+for\nPrograms.com&font=montserrat',
+    img: '/programs-feature.png',
     imgAlt: 'LinkedIn carousel designs created for Programs.com',
   },
   {
@@ -24,7 +24,7 @@ const workItems = [
     title: 'TouchSuite',
     subtitle: '',
     desc: 'Campaign assets, landing pages, and sales enablement for a fintech company scaling demand generation.',
-    img: 'https://placehold.co/600x300/1a1a2e/818cf8?text=Campaign+assets\nfor+TouchSuite&font=montserrat',
+    img: '/touchsuite-feature.png',
     imgAlt: 'Campaign landing page and ad creative for TouchSuite',
   },
   {
@@ -32,7 +32,7 @@ const workItems = [
     title: 'LiteRanker',
     subtitle: '',
     desc: 'SEO content operations at scale: briefs, production workflows, editorial standards, and content refresh systems.',
-    img: 'https://placehold.co/600x300/1a1a2e/818cf8?text=SEO+dashboard\nfor+LiteRanker&font=montserrat',
+    img: '/literanker-feature.png',
     imgAlt: 'SEO content production dashboard for LiteRanker',
   },
 ];
@@ -41,42 +41,42 @@ const whatWeDo = [
   {
     title: 'Content Systems',
     desc: 'LinkedIn and social content that compounds. Editorial frameworks, repeatable formats, one cadence.',
-    img: 'https://placehold.co/480x280/f0f0ff/6366f1?text=Content+system\neditorial+calendar&font=montserrat',
+    img: '/content-system-feature.png',
     imgAlt: 'Content system editorial calendar',
     size: 'large',
   },
   {
     title: 'Creative Production',
     desc: 'Campaign assets, ad creative, visual systems. Your brand, everywhere, looking like one brand.',
-    img: 'https://placehold.co/400x240/fef2f2/ef4444?text=Campaign+creative\nassets+showcase&font=montserrat',
+    img: '/creative-production-feature.png',
     imgAlt: 'Campaign creative assets',
     size: 'small',
   },
   {
     title: 'SEO & GEO Ops',
     desc: 'Search-first content for how people find answers today, including AI-assisted discovery.',
-    img: 'https://placehold.co/400x240/f0fdf4/16a34a?text=SEO+analytics\ndashboard&font=montserrat',
+    img: '/seo-feature.png',
     imgAlt: 'SEO analytics dashboard',
     size: 'small',
   },
   {
     title: 'Marketing Ops',
     desc: 'Email, CRM, automation that connects content to outcomes. Systems that scale with you.',
-    img: 'https://placehold.co/400x240/fffbeb/f59e0b?text=Marketing+automation\nworkflow&font=montserrat',
+    img: '/marketing-ops-feature.png',
     imgAlt: 'Marketing automation workflow',
     size: 'small',
   },
   {
     title: 'Event Collateral',
     desc: 'Signage, booth materials, one-pagers, presentation packs. Built for the real world.',
-    img: 'https://placehold.co/400x240/fdf2f8/ec4899?text=Event+booth\ncollateral+design&font=montserrat',
+    img: '/collateral-feature.png',
     imgAlt: 'Event booth collateral design',
     size: 'small',
   },
   {
     title: 'Workflow Automation',
     desc: 'HubSpot, Klaviyo, Zapier. Simple enough to maintain, structured enough to scale.',
-    img: 'https://placehold.co/480x280/eef2ff/6366f1?text=Automation\nworkflow+builder&font=montserrat',
+    img: '/workflow-feature.png',
     imgAlt: 'Automation workflow builder',
     size: 'large',
   },
@@ -161,8 +161,8 @@ export default function HomePage() {
       {/* ══════════ HERO ══════════ */}
       <section className="relative flex min-h-screen items-center overflow-hidden">
         {/* Decorative orbs */}
-        <div className="animate-float pointer-events-none absolute right-[-10%] top-[10%] h-[500px] w-[500px] rounded-full bg-gradient-to-br from-indigo-500/[0.07] to-violet-500/[0.04] blur-3xl" />
-        <div className="animate-float-reverse pointer-events-none absolute bottom-[5%] left-[-5%] h-[400px] w-[400px] rounded-full bg-gradient-to-tr from-purple-500/[0.06] to-blue-500/[0.03] blur-3xl" />
+        <div className="animate-float pointer-events-none absolute right-[-10%] top-[10%] h-125 w-125 rounded-full bg-linear-to-br from-indigo-500/[0.07] to-violet-500/4 blur-3xl" />
+        <div className="animate-float-reverse pointer-events-none absolute bottom-[5%] left-[-5%] h-100 w-100 rounded-full bg-linear-to-tr from-purple-500/6 to-blue-500/3 blur-3xl" />
         <div className="dot-pattern pointer-events-none absolute inset-0 opacity-30" />
 
         <div className="relative mx-auto max-w-6xl px-6 pt-24 pb-16 lg:pt-0 lg:pb-0">
@@ -238,7 +238,7 @@ export default function HomePage() {
               <FadeIn delay="fade-delay-2">
                 <div className="relative">
                   <Image
-                    src="https://placehold.co/480x580/transparent/6366f1?text=Your+transparent\nimage+goes+here\n480x580&font=montserrat"
+                    src="/hero.png"
                     alt="HookImpact creative showcase"
                     width={480}
                     height={580}
@@ -275,7 +275,7 @@ export default function HomePage() {
               <div className="shine-hover group flex h-full w-full flex-col overflow-hidden rounded-2xl border border-rule-dark bg-surface-dark-alt transition-all duration-300 hover:border-accent/30">
                 <div className="relative flex-1 overflow-hidden">
                   <Image
-                    src={workItems[0].img}
+                    src="/programs-feature.png"
                     alt={workItems[0].imgAlt}
                     width={700}
                     height={460}
@@ -334,11 +334,11 @@ export default function HomePage() {
               <FadeIn delay="fade-delay-4" className="flex flex-1">
                 <Link
                   href="/case-studies"
-                  className="group flex w-full items-center justify-between rounded-2xl border border-rule-dark bg-gradient-to-br from-accent/10 to-purple-500/5 p-6 transition-all duration-300 hover:border-accent/40 hover:from-accent/15 hover:to-purple-500/10"
+                  className="group flex w-full items-center justify-between rounded-2xl border border-rule-dark bg-linear-to-br from-accent/10 to-purple-500/5 p-6 transition-all duration-300 hover:border-accent/40 hover:from-accent/15 hover:to-purple-500/10"
                 >
                   <div>
-                    <p className="text-sm font-semibold text-white">View all case studies</p>
-                    <p className="mt-1 text-xs text-white/50">See detailed breakdowns of our work</p>
+                    <p className="text-lg font-semibold text-white">View all case studies</p>
+                    <p className="mt-1 text-sm text-white/50">See detailed breakdowns of our work</p>
                   </div>
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent/20 text-accent-light transition-all duration-300 group-hover:bg-accent group-hover:text-white">
                     <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -354,7 +354,7 @@ export default function HomePage() {
 
       {/* ══════════ WHAT WE DO (disruptive bento with images) ══════════ */}
       <section className="relative overflow-hidden py-24 lg:py-32">
-        <div className="animate-float pointer-events-none absolute left-[-8%] top-[20%] h-[350px] w-[350px] rounded-full bg-gradient-to-br from-indigo-500/[0.05] to-violet-500/[0.03] blur-3xl" />
+        <div className="animate-float pointer-events-none absolute left-[-8%] top-[20%] h-87.5 w-87.5 rounded-full bg-linear-to-br from-indigo-500/5 to-violet-500/3 blur-3xl" />
 
         <div className="relative mx-auto max-w-6xl px-6">
           <FadeIn>
@@ -392,7 +392,7 @@ export default function HomePage() {
                       className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
                       unoptimized
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                    <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent" />
                   </div>
 
                   <div className="flex flex-1 flex-col p-6">
@@ -431,7 +431,7 @@ export default function HomePage() {
               <FadeIn delay="fade-delay-1">
                 <div className="img-float mt-8 overflow-hidden rounded-2xl shadow-lg">
                   <Image
-                    src="https://placehold.co/480x320/f4f4f5/52525b?text=Project+management\nboard+or+workflow\ndiagram&font=montserrat"
+                    src="/process-feature.png"
                     alt="Project management workflow showing content production pipeline"
                     width={480}
                     height={320}
@@ -503,10 +503,10 @@ export default function HomePage() {
 
           {/* LiteRanker partnership - floating visual */}
           <FadeIn delay="fade-delay-2">
-            <div className="relative mt-16 overflow-hidden rounded-3xl bg-gradient-to-br from-surface-dark via-[#12121a] to-surface-dark p-10 lg:p-14">
+            <div className="relative mt-16 overflow-hidden rounded-3xl bg-linear-to-br from-surface-dark via-[#12121a] to-surface-dark p-10 lg:p-14">
               {/* Floating decorative elements */}
-              <div className="animate-float pointer-events-none absolute -right-8 -top-8 h-40 w-40 rounded-full bg-gradient-to-br from-accent/20 to-purple-500/10 blur-2xl" />
-              <div className="animate-float-reverse pointer-events-none absolute -bottom-6 -left-6 h-32 w-32 rounded-full bg-gradient-to-tr from-purple-500/15 to-accent/10 blur-2xl" />
+              <div className="animate-float pointer-events-none absolute -right-8 -top-8 h-40 w-40 rounded-full bg-linear-to-br from-accent/20 to-purple-500/10 blur-2xl" />
+              <div className="animate-float-reverse pointer-events-none absolute -bottom-6 -left-6 h-32 w-32 rounded-full bg-linear-to-tr from-purple-500/15 to-accent/10 blur-2xl" />
 
               <div className="relative grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
                 <div>
@@ -514,7 +514,7 @@ export default function HomePage() {
                     Strategic Partnership
                   </p>
                   <h3 className="mt-3 text-2xl font-bold text-white sm:text-3xl">
-                    HookImpact <span className="text-accent-light">&times;</span> LiteRanker
+                    <span className="mt-3 text-2xl font-bold text-white sm:text-3xl"> HookImpact</span> <span className="text-accent-light">&times;</span> <span className="mt-3 text-2xl font-bold text-white sm:text-3xl">LiteRanker</span>
                   </h3>
                   <p className="mt-4 text-sm leading-relaxed text-white/60">
                     From keyword research to content production, we combine
@@ -534,17 +534,20 @@ export default function HomePage() {
                 </div>
 
                 <div className="flex items-center justify-center gap-8 lg:justify-end">
-                  <div className="animate-float flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-accent to-purple-500 text-2xl font-bold text-white shadow-2xl shadow-accent/30">
-                    HI
-                  </div>
+                    <Image
+                      src="/hookimpact-logo-white.png"
+                      alt="LiteRanker logo"
+                      width={90}
+                      height={64}
+                      className="drop-shadow-lg"
+                      unoptimized
+                    />
                   <div className="flex flex-col items-center gap-1">
-                    <div className="h-px w-12 bg-gradient-to-r from-transparent via-accent-light/50 to-transparent" />
-                    <span className="text-xs text-white/30">+</span>
-                    <div className="h-px w-12 bg-gradient-to-r from-transparent via-accent-light/50 to-transparent" />
+                    <span className="text-lg text-white/30">+</span>
                   </div>
                   <div className="animate-float-reverse">
                     <Image
-                      src="https://placehold.co/160x64/transparent/818cf8?text=LiteRanker&font=montserrat"
+                      src="/literanker-logo-white-fill.svg"
                       alt="LiteRanker logo"
                       width={160}
                       height={64}
@@ -580,7 +583,7 @@ export default function HomePage() {
                       alt={post.imgAlt}
                       width={600}
                       height={400}
-                      className="aspect-[3/2] w-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
+                      className="aspect-3/2 w-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
                       unoptimized
                     />
                   </div>
@@ -607,7 +610,7 @@ export default function HomePage() {
       </section>
 
       {/* ══════════ CTA BANNER STRIPE ══════════ */}
-      <section className="dark-section relative z-20 overflow-visible bg-gradient-to-r from-[#0c0c14] via-surface-dark to-[#0c0c14]">
+      <section className="dark-section relative z-20 overflow-visible bg-linear-to-r from-[#0c0c14] via-surface-dark to-[#0c0c14]">
         <div className="mx-auto max-w-6xl px-6">
           <FadeIn>
             <div className="grid grid-cols-1 items-center gap-8 py-16 lg:grid-cols-12 lg:py-20">
@@ -625,7 +628,7 @@ export default function HomePage() {
                 </p>
                 <Link
                   href="/contact"
-                  className="btn-glow mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-accent to-purple-500 px-7 py-3 text-sm font-semibold text-white transition-all duration-200 hover:shadow-xl hover:shadow-accent/25"
+                  className="btn-glow mt-6 inline-flex items-center gap-2 rounded-full bg-linear-to-r from-accent to-purple-500 px-7 py-3 text-sm font-semibold text-white transition-all duration-200 hover:shadow-xl hover:shadow-accent/25"
                 >
                   Let&rsquo;s Talk Now
                 </Link>
@@ -634,11 +637,11 @@ export default function HomePage() {
               <div className="relative hidden lg:col-span-4 lg:flex lg:justify-end">
                 <div className="relative -my-28 z-30">
                   <Image
-                    src="https://placehold.co/320x420/eef2ff/6366f1?text=Deliverables\ncollage+photo\nslightly+tilted\n3:4+format&font=montserrat"
+                    src="/cta-feature.png"
                     alt="HookImpact deliverables collage tilted at an angle"
                     width={320}
                     height={420}
-                    className="w-[280px] rotate-3 rounded-2xl shadow-2xl shadow-black/40 transition-transform duration-500 hover:rotate-1"
+                    className="w-70 rotate-3 rounded-2xl shadow-2xl shadow-black/40 transition-transform duration-500 hover:rotate-1"
                     unoptimized
                   />
                 </div>

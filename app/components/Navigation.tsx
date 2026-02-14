@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
 const links = [
@@ -39,10 +40,19 @@ export default function Navigation() {
         <div className="flex h-16 items-center justify-between">
           <Link
             href="/"
-            className="text-heading text-[15px] font-bold tracking-tight"
+            className="flex items-center gap-2 text-heading text-[15px] font-bold tracking-tight"
           >
+            <Image
+              src="/hookimpact-logo.png"
+              alt="HookImpact logo"
+              width={28}
+              height={28}
+              className="drop-shadow-md"
+              unoptimized
+            />
             HookImpact
           </Link>
+
 
           {/* Desktop */}
           <div className="hidden items-center gap-1 md:flex">
@@ -73,7 +83,7 @@ export default function Navigation() {
             className="relative z-10 flex h-9 w-9 items-center justify-center rounded-lg text-heading transition-colors hover:bg-surface-alt md:hidden"
             aria-label="Toggle menu"
           >
-            <div className="flex w-4 flex-col items-end gap-[5px]">
+            <div className="flex w-4 flex-col items-end gap-1.5">
               <span
                 className={`block h-[1.5px] bg-current transition-all duration-300 ease-out ${
                   isOpen ? 'w-4 translate-y-[3.25px] rotate-45' : 'w-4'
