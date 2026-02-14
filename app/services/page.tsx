@@ -15,7 +15,7 @@ const services = [
     title: 'Content Systems',
     subtitle: 'LinkedIn & Social',
     desc: 'Structured, repeatable social content that compounds. Editorial themes, narrative frameworks, and a production cadence aligned with your positioning.',
-    img: 'https://placehold.co/560x340/f0f0ff/6366f1?text=Content+system\ncalendar+and\neditorial+framework&font=montserrat',
+    img: '/content-system-feature.png',
     imgAlt: 'Content system editorial calendar',
     accent: 'from-indigo-500 to-violet-500',
   },
@@ -23,7 +23,7 @@ const services = [
     title: 'SEO & GEO Ops',
     subtitle: 'Search & Discovery',
     desc: 'SEO-first and GEO-aware content for how people search today. Full briefs, AI-accelerated drafts, strong human editing, and content refresh systems.',
-    img: 'https://placehold.co/560x340/f0fdf4/16a34a?text=SEO+analytics\ndashboard+with\nkeyword+rankings&font=montserrat',
+    img: '/seo-feature.png',
     imgAlt: 'SEO analytics dashboard',
     accent: 'from-emerald-500 to-teal-500',
   },
@@ -31,7 +31,7 @@ const services = [
     title: 'Creative Production',
     subtitle: 'Campaigns & Paid Media',
     desc: 'Landing pages, ad creative, lead magnets, and visual systems. Your marketing output looking like one brand, not a patchwork of styles.',
-    img: 'https://placehold.co/560x340/fef2f2/ef4444?text=Campaign+landing\npage+and+ad+creative\ndesign+showcase&font=montserrat',
+    img: '/creative-production-feature.png',
     imgAlt: 'Campaign creative assets showcase',
     accent: 'from-rose-500 to-pink-500',
   },
@@ -39,7 +39,7 @@ const services = [
     title: 'Event Collateral',
     subtitle: 'Print & Physical',
     desc: 'Signage, booth assets, banners, one-pagers, sales materials, and presentation packs that match the brand and meet production standards.',
-    img: 'https://placehold.co/560x340/fdf2f8/ec4899?text=Event+booth+design\nand+corporate\ncollateral+materials&font=montserrat',
+    img: '/collateral-feature.png',
     imgAlt: 'Event booth and corporate collateral',
     accent: 'from-pink-500 to-fuchsia-500',
   },
@@ -47,7 +47,7 @@ const services = [
     title: 'Marketing Ops',
     subtitle: 'Email, CRM & Automation',
     desc: 'Email campaigns, CRM workflows, and automation flows in HubSpot and Klaviyo. Simple to maintain, structured to scale.',
-    img: 'https://placehold.co/560x340/fffbeb/f59e0b?text=Marketing+automation\nworkflow+builder\nand+CRM+dashboard&font=montserrat',
+    img: '/marketing-ops-feature.png',
     imgAlt: 'Marketing automation workflow builder',
     accent: 'from-amber-500 to-orange-500',
   },
@@ -58,21 +58,21 @@ const featuredWork = [
     title: 'Programs.com',
     tag: 'Social Content System',
     desc: 'Built the content engine for a Brian Dean (Backlinko) cybersecurity venture.',
-    img: 'https://placehold.co/400x260/1a1a2e/818cf8?text=Programs.com\ncontent+system&font=montserrat',
+    img: '/programs-feature.png',
     imgAlt: 'Programs.com content system',
   },
   {
     title: 'TouchSuite',
     tag: 'Fintech Campaigns',
     desc: 'Campaign assets and demand generation for a scaling fintech company.',
-    img: 'https://placehold.co/400x260/1a1a2e/818cf8?text=TouchSuite\ncampaign+assets&font=montserrat',
+    img: '/touchsuite-feature.png',
     imgAlt: 'TouchSuite campaign assets',
   },
   {
     title: 'LiteRanker',
     tag: 'SEO Content Ops',
     desc: 'End-to-end SEO content operations at scale for a technical SEO platform.',
-    img: 'https://placehold.co/400x260/1a1a2e/818cf8?text=LiteRanker\nSEO+operations&font=montserrat',
+    img: '/literanker-feature.png',
     imgAlt: 'LiteRanker SEO operations',
   },
 ];
@@ -158,7 +158,7 @@ export default function ServicesPage() {
             <FadeIn delay="fade-delay-2">
               <div className="relative hidden lg:block">
                 <Image
-                  src="https://placehold.co/520x380/f4f4f5/52525b?text=Services+hero+image\nshowing+creative\nproduction+process&font=montserrat"
+                  src="/services-hero.png"
                   alt="HookImpact creative production process"
                   width={520}
                   height={380}
@@ -319,11 +319,12 @@ export default function ServicesPage() {
             </div>
           </FadeIn>
 
-          {/* LiteRanker partnership */}
+          {/* LiteRanker partnership - floating visual */}
           <FadeIn delay="fade-delay-2">
-            <div className="relative mt-16 overflow-hidden rounded-3xl bg-gradient-to-br from-surface-dark via-[#12121a] to-surface-dark p-10 lg:p-14">
-              <div className="animate-float pointer-events-none absolute -right-8 -top-8 h-40 w-40 rounded-full bg-gradient-to-br from-accent/20 to-purple-500/10 blur-2xl" />
-              <div className="animate-float-reverse pointer-events-none absolute -bottom-6 -left-6 h-32 w-32 rounded-full bg-gradient-to-tr from-purple-500/15 to-accent/10 blur-2xl" />
+            <div className="relative mt-16 overflow-hidden rounded-3xl bg-linear-to-br from-surface-dark via-[#12121a] to-surface-dark p-10 lg:p-14">
+              {/* Floating decorative elements */}
+              <div className="animate-float pointer-events-none absolute -right-8 -top-8 h-40 w-40 rounded-full bg-linear-to-br from-accent/20 to-purple-500/10 blur-2xl" />
+              <div className="animate-float-reverse pointer-events-none absolute -bottom-6 -left-6 h-32 w-32 rounded-full bg-linear-to-tr from-purple-500/15 to-accent/10 blur-2xl" />
 
               <div className="relative grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
                 <div>
@@ -331,7 +332,7 @@ export default function ServicesPage() {
                     Strategic Partnership
                   </p>
                   <h3 className="mt-3 text-2xl font-bold text-white sm:text-3xl">
-                    HookImpact <span className="text-accent-light">&times;</span> LiteRanker
+                    <span className="mt-3 text-2xl font-bold text-white sm:text-3xl"> HookImpact</span> <span className="text-accent-light">&times;</span> <span className="mt-3 text-2xl font-bold text-white sm:text-3xl">LiteRanker</span>
                   </h3>
                   <p className="mt-4 text-sm leading-relaxed text-white/60">
                     From keyword research to content production, we combine
@@ -339,20 +340,32 @@ export default function ServicesPage() {
                     and creative execution. Together, we deliver end-to-end SEO
                     content operations for B2B teams.
                   </p>
+                  <Link
+                    href="/services"
+                    className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-accent-light transition-colors hover:text-white"
+                  >
+                    Learn more
+                    <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </Link>
                 </div>
 
-                <div className="flex items-center justify-center gap-8 lg:justify-end">
-                  <div className="animate-float flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-accent to-purple-500 text-2xl font-bold text-white shadow-2xl shadow-accent/30">
-                    HI
-                  </div>
+                <div className="animate-float flex items-center justify-center gap-8 lg:justify-end">
+                    <Image
+                      src="/hookimpact-logo-white.png"
+                      alt="LiteRanker logo"
+                      width={90}
+                      height={64}
+                      className="drop-shadow-lg"
+                      unoptimized
+                    />
                   <div className="flex flex-col items-center gap-1">
-                    <div className="h-px w-12 bg-gradient-to-r from-transparent via-accent-light/50 to-transparent" />
-                    <span className="text-xs text-white/30">+</span>
-                    <div className="h-px w-12 bg-gradient-to-r from-transparent via-accent-light/50 to-transparent" />
+                    <span className="text-lg text-white/30">+</span>
                   </div>
                   <div className="animate-float-reverse">
                     <Image
-                      src="https://placehold.co/160x64/transparent/818cf8?text=LiteRanker&font=montserrat"
+                      src="/literanker-logo-white-fill.svg"
                       alt="LiteRanker logo"
                       width={160}
                       height={64}
@@ -395,7 +408,7 @@ export default function ServicesPage() {
               <div className="relative hidden lg:col-span-3 lg:flex lg:justify-end">
                 <div className="relative -my-28 z-30">
                   <Image
-                    src="https://placehold.co/280x370/eef2ff/6366f1?text=Creative\ndeliverables\n3:4+format&font=montserrat"
+                    src="/cta-feature.png"
                     alt="HookImpact deliverables collage"
                     width={280}
                     height={370}

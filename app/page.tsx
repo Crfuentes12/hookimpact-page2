@@ -533,7 +533,7 @@ export default function HomePage() {
                   </Link>
                 </div>
 
-                <div className="flex items-center justify-center gap-8 lg:justify-end">
+                <div className="animate-float flex items-center justify-center gap-8 lg:justify-end">
                     <Image
                       src="/hookimpact-logo-white.png"
                       alt="LiteRanker logo"

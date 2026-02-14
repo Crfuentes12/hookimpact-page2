@@ -42,7 +42,7 @@ export default function CaseStudiesPage() {
           <FadeIn>
             <div className="overflow-hidden rounded-2xl shadow-xl">
               <Image
-                src="https://placehold.co/1200x500/1a1a2e/818cf8?text=Wide+banner+image+here\nshowing+Programs.com+LinkedIn+carousel+spread\nwith+multiple+slide+designs+side+by+side&font=montserrat"
+                src="/programs-feature.png"
                 alt="Wide banner showing Programs.com LinkedIn carousel spread with multiple slide designs"
                 width={1200}
                 height={500}
@@ -191,7 +191,7 @@ export default function CaseStudiesPage() {
                 <div className="relative">
                   <div className="img-angled-reverse overflow-hidden rounded-2xl shadow-2xl">
                     <Image
-                      src="https://placehold.co/600x420/1a1a2e/818cf8?text=TouchSuite+landing+page\nmockup+on+laptop\nshowing+hero+section&font=montserrat"
+                      src="/touchsuite-feature.png"
                       alt="TouchSuite landing page mockup showing the hero section on a laptop screen"
                       width={600}
                       height={420}
@@ -350,7 +350,7 @@ export default function CaseStudiesPage() {
                 <div className="relative">
                   <div className="img-angled overflow-hidden rounded-2xl shadow-2xl">
                     <Image
-                      src="https://placehold.co/600x420/eef2ff/6366f1?text=SEO+content+dashboard\nshowing+keyword+rankings\nand+content+pipeline&font=montserrat"
+                      src="/literanker-feature.png"
                       alt="SEO content dashboard showing keyword rankings and content pipeline for LiteRanker"
                       width={600}
                       height={420}

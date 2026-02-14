@@ -101,7 +101,7 @@ export default function AboutPage() {
               </div>
               <div className="img-float overflow-hidden rounded-2xl shadow-xl">
                 <Image
-                  src="https://placehold.co/560x380/eef2ff/6366f1?text=Team+collaboration\nphoto+or+workspace\nillustration&font=montserrat"
+                  src="/about-hero.png"
                   alt="HookImpact team collaboration workspace"
                   width={560}
                   height={380}
@@ -152,7 +152,7 @@ export default function AboutPage() {
               <div className="order-2 lg:order-1">
                 <div className="img-angled overflow-hidden rounded-2xl shadow-xl">
                   <Image
-                    src="https://placehold.co/560x380/f4f4f5/52525b?text=Remote+team\nworking+across\ntime+zones&font=montserrat"
+                    src="/team.png"
                     alt="Distributed team working across time zones"
                     width={560}
                     height={380}
@@ -212,7 +212,7 @@ export default function AboutPage() {
               <div className="relative hidden lg:col-span-3 lg:flex lg:justify-end">
                 <div className="relative -my-28 z-30">
                   <Image
-                    src="https://placehold.co/280x370/eef2ff/6366f1?text=Studio\nworkspace\n3:4+format&font=montserrat"
+                    src="/cta-feature.png"
                     alt="HookImpact studio workspace"
                     width={280}
                     height={370}
